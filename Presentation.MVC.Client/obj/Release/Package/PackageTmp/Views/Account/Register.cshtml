@@ -1,0 +1,69 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.Account.RegisterModel
+@{
+    this.ViewBag.Title = "Register";
+    this.Layout = MVCT.Shared.Views._LoginLayout;
+
+}
+<div class="registerBox">
+    <div class="registerBox-header">Create a new account.</div>
+
+    @using (this.Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+        <table>
+            <tr>
+                <td>@Html.LabelFor(m => m.UserName)</td>
+                <td>  @Html.TextBoxFor(m => m.UserName, new { @class="loginBox_textbox"})</td>
+            </tr>
+            <tr>
+                <td> @Html.LabelFor(m => m.FirstName)</td>
+                <td> @Html.TextBoxFor(m => m.FirstName, new { @class="loginBox_textbox"})</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.LastName)</td>
+                <td>@Html.TextBoxFor(m => m.LastName, new { @class="loginBox_textbox"})</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.Email)</td>
+                <td> @Html.TextBoxFor(m => m.Email, new { @class="loginBox_textbox"})</td>
+            </tr>
+            <tr>
+                <td>  @Html.LabelFor(m => m.ConfirmEmail)</td>
+                <td>@Html.TextBoxFor(m => m.ConfirmEmail, new { @class="loginBox_textbox"})</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.Password)</td>
+                <td>@Html.PasswordFor(m => m.Password, new { @class="loginBox_textbox"})</td>
+            </tr>
+            <tr>
+                <td> @Html.LabelFor(m => m.Sex)</td>
+                <td>@Html.EditorFor(m => m.Sex)</td>
+            </tr>
+           <tr>
+                <td style="height: 5px;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>  @Html.LabelFor(m => m.Birthday)</td>
+                <td>@Html.EditorFor(m => m.Birthday)</td>
+            </tr>
+            <tr>
+                <td style="height: 15px;"></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td></td>
+                <td> <input type="submit" value="Register" style="width: 225px; height: 40px;" /></td>
+            </tr>
+        </table>
+            
+           
+    }
+    
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval") 
+}

@@ -1,0 +1,161 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<style>
+    #accordion-container {
+        font-size: 12px;
+        width: 738px;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+        background: #ebebeb;
+        margin: 5px 0 0 0;
+        padding: 5px 10px;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+        color: #666666;
+        width: 718px;
+        font-weight: bold;
+      
+    }
+
+    .active-header {
+        background: url(../../content/images/minus-white.png) #6bb130;
+        background-repeat: no-repeat;
+        background-position: right 50%;
+        color: #ffffff;
+        
+    }
+
+        .active-header:hover {
+            background: url(../../content/images/minus-white.png) #6bb130;
+            background-repeat: no-repeat;
+            background-position: right 50%;
+        }
+
+    .inactive-header {
+        background: url(../../content/images/plus.png) #ebebeb;
+        background-repeat: no-repeat;
+        background-position: right 50%;
+    }
+
+        .inactive-header:hover {
+            background: url(../../content/images/plus-white.png) #6bb130;
+            background-repeat: no-repeat;
+            background-position: right 50%;
+            color: #ffffff;
+        }
+
+    .accordion-content {
+        display: none;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-top: 0;
+        padding: 10px;
+               -moz-box-shadow: 0 5px 15px #cccccc;
+        -webkit-box-shadow: 0 5px 15px #cccccc;
+        box-shadow: 0 5px 15px #cccccc;
+    }
+
+    #accordion-container .accordion-header i{ font-size: 24px;}
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Add Inactive Class To All Accordion Headers
+        $('.accordion-header').toggleClass('inactive-header');
+
+        //Set The Accordion Content Width
+        var contentwidth = $('.accordion-header').width();
+        $('.accordion-content').css({ 'width': contentwidth });
+
+        //Open The First Accordion Section When Page Loads
+        $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
+        $('.accordion-content').first().slideDown().toggleClass('open-content');
+
+        // The Accordion Effect
+        $('.accordion-header').click(function () {
+            if ($(this).is('.inactive-header')) {
+                $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
+                $(this).toggleClass('active-header').toggleClass('inactive-header');
+                $(this).next().slideToggle().toggleClass('open-content');
+            }
+
+            else {
+                $(this).toggleClass('active-header').toggleClass('inactive-header');
+                $(this).next().slideToggle().toggleClass('open-content');
+            }
+        });
+        return false;
+    });
+</script>
+
+<div id="accordion-container">
+    <div class="page-subheader">Account Details</div>
+    <div class="accordion-header"><i class="icon-pictures-5"></i>&nbsp;Profile Picture</div>
+    <div class="accordion-content">
+        <div class="profile">
+            @Html.Partial(MVCT.Edit.Views.Picture._Index, Model.ProfilePicture)
+        </div>
+    </div>
+    <div class="accordion-header"><i class="icon-user-5"></i>&nbsp;About Me</div>
+    <div class="accordion-content">
+        <div class="profile">
+            @Html.Partial(MVCT.Edit.Views.About._Index, Model.About)
+        </div>
+    </div>
+    <div class="accordion-header"><i class="icon-profile"></i>&nbsp;Profile</div>
+    <div class="accordion-content">
+        <div class="profile">
+            @Html.Partial(MVCT.Edit.Views.Profile._Index, Model.ProfileSummary)
+        </div>
+    </div>
+    <div class="accordion-header"><i class="icon-graduation"></i>&nbsp;Resume</div>
+    <div class="accordion-content">
+        <div class="profile">
+            @Html.Partial(MVCT.Edit.Views.Resume._Index, Model.Resume)
+        </div>
+    </div>
+    <div class="accordion-header"><i class="icon-trophy"></i>&nbsp;Achievements</div>
+    <div class="accordion-content">
+        <div class="profile">
+            @Html.Partial(MVCT.Edit.Views.Achievements._Index, Model.Achievements)
+        </div>
+    </div>
+    <div class="accordion-header"><i class="icon-knight"></i>&nbsp;Result</div>
+    <div class="accordion-content">
+        <div class="profile">
+            @Html.Partial(MVCT.Edit.Views.Results._Index, Model.Results)
+        </div>
+    </div>
+    <div class="accordion-header"><i class="icon-picture"></i>&nbsp;Media</div>
+    <div class="accordion-content">
+        Media
+    </div>
+    <div class="accordion-header"><i class="icon-users"></i>&nbsp;Friends </div>
+    <div class="accordion-content">
+        Friends
+    </div>
+    <div class="accordion-header"><i class="icon-comments-2"></i>&nbsp;Tweet Wall</div>
+    <div class="accordion-content">
+        Tweet Wall
+    </div>
+    <div class="accordion-header"><i class="icon-mail"></i>&nbsp;Contact</div>
+    <div class="accordion-content">
+        Contact
+    </div>
+    <div class="accordion-header"><i class="icon-remove-5"></i>&nbsp;Delete Account</div>
+    <div class="accordion-content">
+        <div class="profile">
+            <p>You can delete your profile.</p>
+            @Html.ActionLink("Delete", MVCT.Edit.Delete(Model.ProfileSummary.Id))
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

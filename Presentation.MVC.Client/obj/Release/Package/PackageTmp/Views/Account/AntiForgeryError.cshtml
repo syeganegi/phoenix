@@ -1,0 +1,11 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+    this.Layout = MVCT.Shared.Views._ErrorLayout;
+}
+
+<hgroup class="page">
+    <h1 class="page-subheader">Error</h1>
+    <h2 class="error">Sorry, but you are already logged into the site or the provided anti-forgery token was not valid.</h2>
+</hgroup>

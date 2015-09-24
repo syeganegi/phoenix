@@ -1,0 +1,104 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.Account.LoginModel
+
+@{
+    this.ViewBag.Title = "Log in";
+    this.Layout = "~/Views/Shared/_LoginLayout.cshtml";
+
+}
+
+<hgroup class="title">
+    <h1>@this.ViewBag.Title.</h1>
+</hgroup>
+
+<section id="loginForm">
+    <h2>Use a local account to log in.</h2>
+    @using (this.Html.BeginForm(new { this.ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+    <div class="loginBox">
+        <div class="loginBox_left">
+            <table class="loginBox_left_table">
+                <tr>
+                    <td>
+                    @Html.LabelFor(m => m.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    @Html.TextBoxFor(m => m.UserName)
+                    @Html.ValidationMessageFor(m => m.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td>
+                    @Html.LabelFor(m => m.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <input id="Submit1" type="submit" value="Log In" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" style="color: #ffffff;">Forgot your password?</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 40px"></td>
+                </tr>
+               
+            </table>
+        </div>
+        <div class="loginBox_middle">
+            &nbsp;
+        </div>
+        <div class="loginBox_right">
+            <table class="loginBox_right_table">
+                <tr>
+                    <td align="center">
+                        <input id="Button2" type="button" value="Login With Facebook" style="font-size: 16px;" class="loginBox_SignUp"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="height: 100px;" >
+                        OR
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        @Html.ActionLink("Sign Up", "Register", new { @class="loginBox_SignUp" })
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear"></div>
+    </div>
+}
+</section>
+
+<section class="social" id="socialLoginForm">
+    <h2>Use another service to log in.</h2>
+    @Html.Action("ExternalLoginsList", new { this.ViewBag.ReturnUrl })
+</section>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

@@ -1,0 +1,61 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.PostModel
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.validator.unobtrusive.parse($("#ajaxform"));
+    });
+
+    function onPostSuccess(ajaxContext) {
+        $("#noPost").empty();
+        bindDelete();
+        resetForm($("#ajaxform"));
+    }
+</script>
+@using (Ajax.BeginForm(MVCT.Post.Create(), new AjaxOptions
+       {
+           UpdateTargetId = "postList",
+           InsertionMode = InsertionMode.InsertBefore,
+           OnSuccess = "onPostSuccess",
+           OnFailure = "onAjaxFormFaliure",
+           HttpMethod = "POST"
+       },
+       new { id = "ajaxform" }))
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    <div class="profile-display-editbox">
+    <table>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Title)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 5px;"></td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Content)
+            </td>
+            <td class="editor-field">
+                @Html.TextAreaFor(model => model.Content, new { rows = "5", style = "width : 450px; height : 50px;" })
+                @Html.ValidationMessageFor(model => model.Content)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 15px;"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Shout" />
+            </td>
+        </tr>
+    </table>
+        </div>
+}
+
+<div class="tabs-header">Shouts</div>

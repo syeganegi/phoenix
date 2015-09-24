@@ -1,0 +1,23 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="../../content/css/Login.css" rel="stylesheet" />
+    <link href="../../content/css/font.css" rel="stylesheet" />
+    <link href="../../content/css/icon.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div style="height:100px;"></div>
+    <div class="logo"><img src="../../Content/Images/ESIOne_logo.png" width="348px" height="100px"/></div>
+    <div style="height: 50px;"></div>
+    <div>@RenderBody()</div>
+
+    @this.RenderSection("scripts", required: false)
+</body>
+</html>

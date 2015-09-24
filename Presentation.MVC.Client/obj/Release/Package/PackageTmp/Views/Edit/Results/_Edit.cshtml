@@ -1,0 +1,29 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ResultsModel
+
+@using (Ajax.BeginForm(MVCT.Edit.Results(), new AjaxOptions
+       {
+           UpdateTargetId = "results-view",
+           InsertionMode = InsertionMode.Replace,
+           OnSuccess = "resultsEditClose",
+           OnFailure = "onAjaxFormFaliure",
+           HttpMethod = "Post"
+       },
+       new { id = "results-form-submit" }))
+{
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td class="editor-field">
+                @Html.TextAreaFor(model => model.Results, new { @id = "results-texteditor" })
+                @Html.ValidationMessageFor(model => model.Results)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+}

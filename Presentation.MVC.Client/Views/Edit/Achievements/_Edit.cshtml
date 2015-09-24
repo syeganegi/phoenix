@@ -1,0 +1,29 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.AchievementsModel
+
+@using (Ajax.BeginForm(MVCT.Edit.Achievements(), new AjaxOptions
+       {
+           UpdateTargetId = "achievements-view",
+           InsertionMode = InsertionMode.Replace,
+           OnSuccess = "achievementsEditClose",
+           OnFailure = "onAjaxFormFaliure",
+           HttpMethod = "Post"
+       },
+       new { id = "achievements-form-submit" }))
+{
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td class="editor-field">
+                @Html.TextAreaFor(model => model.Achievements, new { @id = "achievements-texteditor" })
+                @Html.ValidationMessageFor(model => model.Achievements)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+}

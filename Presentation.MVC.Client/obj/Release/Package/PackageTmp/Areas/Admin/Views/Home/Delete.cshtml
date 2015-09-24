@@ -1,0 +1,22 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.Admin.ProfileAdminModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Confirmation</h2>
+
+<p>Are you sure you want to delete the profile titled 
+   <strong>@Model.FullName</strong>?
+</p>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.UserName)
+    <p>
+        <input type="submit" value="Delete" />
+    </p>
+    <p>
+        @Html.ActionLink("Back to List", MVCT.Admin.Home.Index())
+    </p>
+
+}

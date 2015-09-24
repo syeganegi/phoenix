@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Application.MainBoundedContext.DTO.ProfileModule" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Application.MainBoundedContext.DTO.ProfileModule" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Domain.Seedwork" />
+  <xs:complexType name="FriendshipDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Domain.Seedwork" base="q1:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="InitiatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FriendshipDTO" nillable="true" type="tns:FriendshipDTO" />
+  <xs:complexType name="MediaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="MediaUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaDTO" nillable="true" type="tns:MediaDTO" />
+  <xs:complexType name="PostDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProfileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostDTO" nillable="true" type="tns:PostDTO" />
+  <xs:complexType name="ProfileDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="About" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Achievements" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressAddressLine1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressAddressLine2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressZipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ClubTeam" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollegeUniversity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractDateFrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContractDateTo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CurrentCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FavoriteOtherSport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FavoriteSportingIdol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Friendship" nillable="true" type="tns:FriendshipDTO" />
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HighSchool" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HomePhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hometown" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InstanceMessages" nillable="true" type="tns:ArrayOfInstanceMessageDTO" />
+          <xs:element minOccurs="0" name="InterestedIn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Languages" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ManagementCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OverseasOpportunities" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PictureRawPhoto" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="PlayingPosition" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PoliticalViews" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelationshipStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Religion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Results" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Resume" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchoolAchievements" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondarySchool" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SignedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SportAchievements" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkPhone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileDTO" nillable="true" type="tns:ProfileDTO" />
+  <xs:complexType name="ProfileDTOBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Domain.Seedwork" base="q2:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileDTOBase" nillable="true" type="tns:ProfileDTOBase" />
+  <xs:complexType name="ArrayOfInstanceMessageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstanceMessageDTO" nillable="true" type="tns:InstanceMessageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstanceMessageDTO" nillable="true" type="tns:ArrayOfInstanceMessageDTO" />
+  <xs:complexType name="InstanceMessageDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Domain.Seedwork" base="q3:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InstanceMessageType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ScreenName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InstanceMessageDTO" nillable="true" type="tns:InstanceMessageDTO" />
+  <xs:complexType name="AboutDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="About" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AboutDTO" nillable="true" type="tns:AboutDTO" />
+  <xs:complexType name="AchievementsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Achievements" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AchievementsDTO" nillable="true" type="tns:AchievementsDTO" />
+  <xs:complexType name="BasicInfoDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InterestedIn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Languages" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PoliticalViews" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelationshipStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Religion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BasicInfoDTO" nillable="true" type="tns:BasicInfoDTO" />
+  <xs:complexType name="ContactDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressAddressLine1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressAddressLine2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressZipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HomePhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InstanceMessages" nillable="true" type="tns:ArrayOfInstanceMessageDTO" />
+          <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkPhone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContactDTO" nillable="true" type="tns:ContactDTO" />
+  <xs:complexType name="ArrayOfProfileListDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileListDTO" nillable="true" type="tns:ProfileListDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileListDTO" nillable="true" type="tns:ArrayOfProfileListDTO" />
+  <xs:complexType name="ProfileListDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PictureRawPhoto" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sport" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileListDTO" nillable="true" type="tns:ProfileListDTO" />
+  <xs:complexType name="LivingDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hometown" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LivingDTO" nillable="true" type="tns:LivingDTO" />
+  <xs:complexType name="ArrayOfMediaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MediaDTO" nillable="true" type="tns:MediaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMediaDTO" nillable="true" type="tns:ArrayOfMediaDTO" />
+  <xs:complexType name="ArrayOfPostDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostDTO" nillable="true" type="tns:PostDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPostDTO" nillable="true" type="tns:ArrayOfPostDTO" />
+  <xs:complexType name="ProfilePictureDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RawPhoto" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfilePictureDTO" nillable="true" type="tns:ProfilePictureDTO" />
+  <xs:complexType name="ArrayOfProfileStatsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileStatsDTO" nillable="true" type="tns:ProfileStatsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileStatsDTO" nillable="true" type="tns:ArrayOfProfileStatsDTO" />
+  <xs:complexType name="ProfileStatsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateViewed" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PictureRawPhoto" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sport" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileStatsDTO" nillable="true" type="tns:ProfileStatsDTO" />
+  <xs:complexType name="ProfileSummaryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ClubTeam" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractDateFrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContractDateTo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ManagementCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlayingPosition" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SignedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileSummaryDTO" nillable="true" type="tns:ProfileSummaryDTO" />
+  <xs:complexType name="ResultsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Results" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultsDTO" nillable="true" type="tns:ResultsDTO" />
+  <xs:complexType name="ResumeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Resume" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResumeDTO" nillable="true" type="tns:ResumeDTO" />
+  <xs:complexType name="SportDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClubTeam" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractDateFrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ContractDateTo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FavoriteOtherSport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FavoriteSportingIdol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ManagementCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OverseasOpportunities" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlayingPosition" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchoolAchievements" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SignedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SportAchievements" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SportDTO" nillable="true" type="tns:SportDTO" />
+  <xs:complexType name="WorkEduDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CollegeUniversity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondarySchool" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkEduDTO" nillable="true" type="tns:WorkEduDTO" />
+  <xs:complexType name="ProfileCounterDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProfileDTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ViewCounter" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileCounterDTO" nillable="true" type="tns:ProfileCounterDTO" />
+  <xs:complexType name="ArrayOfProfileSearchResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileSearchResultDTO" nillable="true" type="tns:ProfileSearchResultDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileSearchResultDTO" nillable="true" type="tns:ArrayOfProfileSearchResultDTO" />
+  <xs:complexType name="ProfileSearchResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FriendshipAcceptorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FriendshipDateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FriendshipDateStatusChanged" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FriendshipId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FriendshipInitiatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FriendshipStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileBirthday" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProfileEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProfileLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfilePictureRawPhoto" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ProfileSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileSport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileUserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileSearchResultDTO" nillable="true" type="tns:ProfileSearchResultDTO" />
+</xs:schema>

@@ -1,0 +1,96 @@
+﻿/*
+984px grid system ~ Core CSS.
+12 columns ~ margin: 0px
+
+Based on the golden grid system - http://code.google.com/p/the-golden-grid/
+by Vladimir Carrer
+
+*/
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.GridWrap
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 984px;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.grid_82, .grid_164, .grid_246, .grid_328, .grid_410, .grid_492, .grid_574, .grid_656, .grid_738, .grid_820, .grid_902, .grid_984 {
+	display: inline;
+	float: left;
+	margin-left: 0px;
+}
+
+/* =Grid >> 12 Columns
+--------------------------------------------------------------------------------*/
+.grid_82{width:82px;}
+.grid_164{width:164px;}
+.grid_246{width:246px;}
+.grid_328{width:328px;}
+.grid_410{width:410px;}
+.grid_492{width:492px;}
+.grid_574{width:574px;}
+.grid_656{width:656px;}
+.grid_738{width:738px;}
+.grid_820{width:820px;}
+.grid_902{width:902px;}
+.grid_984{width:984px;}
+
+
+/* =Grid >> 12 Columns - no left margin
+--------------------------------------------------------------------------------*/
+.ml82{margin-left:82px;}
+.ml164{margin-left:164px;}
+.ml246{margin-left:246px;}
+.ml328{margin-left:328px;}
+.ml410{margin-left:410px;}
+.ml492{margin-left:492px;}
+.ml574{margin-left:574px;}
+.ml656{margin-left:656px;}
+.ml738{margin-left:738px;}
+.ml820{margin-left:820px;}
+.ml902{margin-left:902px;}
+.ml984{margin-left:984px;}
+
+
+.inside{margin-left:0;}
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content:' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}

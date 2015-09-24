@@ -1,0 +1,38 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ResumeModel
+
+<script type="text/javascript">
+    function resumeEditClose() {
+        $("#resume-edit").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#resume-edit-close-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#resume-view").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#resume-edit-open-div").animate({ height: 'toggle' }).fadeIn("slow");
+    }
+
+    function resumeEditOpen() {
+        $("#resume-view").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#resume-edit-open-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#resume-edit").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#resume-edit-close-div").animate({ height: 'toggle' }).fadeIn("slow");
+        $.validator.unobtrusive.parse($("#resume-form-submit"));
+    }
+
+    $(function () {
+        $("#resume-texteditor").cleditor();
+        $("#resume-edit").hide();
+        $("#resume-edit-close-div").hide();
+        $("#resume-edit-open").click(resumeEditOpen);
+        $("#resume-edit-close").click(resumeEditClose);
+    });
+
+</script>
+
+<div id="resume-edit-open-div" class="editlink"><a id="resume-edit-open" style="float: right;"><i class="icon-pencil-3"></i>Edit</a></div>
+<div id="resume-edit-close-div" class="editlink"><a id="resume-edit-close" style="float: right;">Cancel</a></div>
+<div class="gap10"></div>
+<div id="resume-view">
+    @Html.Partial(MVCT.Edit.Views.Resume._View)
+</div>
+<div id="resume-edit">
+    @Html.Partial(MVCT.Edit.Views.Resume._Edit)
+</div>
+<div class="clear"></div>

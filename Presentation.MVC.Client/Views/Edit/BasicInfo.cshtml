@@ -1,0 +1,97 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.BasicInfoModel
+
+@{
+    ViewBag.Title = "Basic Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Birthday)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Birthday)
+            @Html.ValidationMessageFor(model => model.Birthday)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Sex)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Sex)
+            @Html.ValidationMessageFor(model => model.Sex)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Languages)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Languages)
+            @Html.ValidationMessageFor(model => model.Languages)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PoliticalViews)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PoliticalViews)
+            @Html.ValidationMessageFor(model => model.PoliticalViews)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Religion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Religion)
+            @Html.ValidationMessageFor(model => model.Religion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Height)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Height)
+            @Html.ValidationMessageFor(model => model.Height)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Weight)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Weight)
+            @Html.ValidationMessageFor(model => model.Weight)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to Profile", MVCT.Edit.Index())
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

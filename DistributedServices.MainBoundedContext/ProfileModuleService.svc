@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Phoenix.PhoenixApp.DistributedServices.MainBoundedContext.ProfileModuleService" CodeBehind="ProfileModuleService.svc.cs" %>

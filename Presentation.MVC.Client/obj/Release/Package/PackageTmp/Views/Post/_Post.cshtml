@@ -1,0 +1,43 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.PostModel
+
+<style>
+    .twit-box {
+        padding: 10px;
+        margin-bottom: 5px;
+         border: 1px solid gainsboro;
+        -moz-box-shadow: 3px 3px 4px #ccc;
+        -webkit-box-shadow: 3px 3px 4px #ccc;
+        box-shadow: 3px 3px 4px #ccc;
+    }
+
+    .twit-header {
+        color: #6bb130;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .twit-content {
+        padding-left: 30px;
+        color: #555;
+        font-size: 12px;
+    }
+</style>
+<div class="twit-box">
+    <div class="twit-header">@Html.DisplayFor(model => model.Title)</div>
+    <div class="gap10"></div>
+    <div class="twit-content"><p>@Html.DisplayFor(model => model.Content)</p></div>
+    <div style="border-top: 1px dashed #eeeeee; margin-top: 10px;">
+        <div style="float: right; padding-top: 3px;">
+            <div style="float: left; padding-right: 10px; padding-top: 10px; vertical-align: text-bottom; font-size: 11px; color: #666666;">Posted: @Html.DisplayFor(model => model.DateCreated)</div>
+            <div>
+                @if (Model.ProfileId == this.CurrentProfile.Id)
+                {
+                    <input type="button" class="delete-post" id="@Model.Id" value="Delete" style="font-size: 11px; font-weight: bold;" />
+                }
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+
+</div>

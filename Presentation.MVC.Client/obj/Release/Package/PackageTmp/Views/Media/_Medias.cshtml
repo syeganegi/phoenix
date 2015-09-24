@@ -1,0 +1,32 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule
+@model MediasModel
+<script type="text/javascript">
+    $(document).ready(function () {
+        bindDelete();
+    });
+
+    function bindDelete() {
+        $(".delete-media").click(function (event) {
+            if (!confirm("Are you sure to delete this media?"))
+                return;
+            $.post(
+                "@Url.Action(MVCT.Media.Delete())",
+                { id: event.target.id },
+                function (data) {
+                    $('#mediaList').html(data);
+                })
+                .success(function () { bindDelete(); })
+                .error(function () { alert("error deleting media"); });
+        });
+    }
+</script>
+
+<div class="tabs_Tweets">
+    <div class="tabs-header">Media</div>
+    @if (Model.UserName.Equals(this.CurrentProfile.UserName, StringComparison.OrdinalIgnoreCase))
+    {
+        @Html.Partial(MVCT.Media.Views._Create, new MediaModel())
+    }
+
+    @Html.Partial(MVCT.Media.Views._MediasList, Model.Medias)
+</div>

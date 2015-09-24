@@ -1,0 +1,72 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.MediaModel
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.validator.unobtrusive.parse($("#ajaxform"));
+    });
+
+    function onMediaSuccess(ajaxContext) {
+        $("#noMedia").empty();
+        bindDelete();
+        resetForm($("#ajaxform"));
+    }
+</script>
+@using (Ajax.BeginForm(MVCT.Media.Create(), new AjaxOptions
+       {
+           UpdateTargetId = "mediaList",
+           InsertionMode = InsertionMode.InsertBefore,
+           OnSuccess = "onMediaSuccess",
+           OnFailure = "onAjaxFormFaliure",
+           HttpMethod = "POST"
+       },
+       new { id = "ajaxform" }))
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    <div class="profile-display-editbox">
+    <table>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Title)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.MediaUrl)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.MediaUrl)
+                @Html.ValidationMessageFor(model => model.MediaUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Type)
+            </td>
+            <td class="editor-field">
+                <select name="Type">
+                    <option>Video</option>
+                    <option>Image</option>
+                </select>
+                @Html.ValidationMessageFor(model => model.Type)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 15px;">
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                <input type="submit" value="Add" />
+            </td>
+        </tr>
+    </table>
+    </div>
+}

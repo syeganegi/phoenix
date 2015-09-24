@@ -1,0 +1,38 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ResultsModel
+
+<script type="text/javascript">
+    function resultsEditClose() {
+        $("#results-edit").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#results-edit-close-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#results-view").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#results-edit-open-div").animate({ height: 'toggle' }).fadeIn("slow");
+    }
+
+    function resultsEditOpen() {
+        $("#results-view").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#results-edit-open-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#results-edit").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#results-edit-close-div").animate({ height: 'toggle' }).fadeIn("slow");
+        $.validator.unobtrusive.parse($("#results-form-submit"));
+    }
+
+    $(function () {
+        $("#results-texteditor").cleditor();
+        $("#results-edit").hide();
+        $("#results-edit-close-div").hide();
+        $("#results-edit-open").click(resultsEditOpen);
+        $("#results-edit-close").click(resultsEditClose);
+    });
+
+</script>
+
+<div id="results-edit-open-div" class="editlink"><a id="results-edit-open" style="float: right;"><i class="icon-pencil-3"></i>Edit</a></div>
+<div id="results-edit-close-div" class="editlink"><a id="results-edit-close" style="float: right;">Cancel</a></div>
+<div class="gap10"></div>
+<div id="results-view">
+    @Html.Partial(MVCT.Edit.Views.Results._View)
+</div>
+<div id="results-edit">
+    @Html.Partial(MVCT.Edit.Views.Results._Edit)
+</div>
+<div class="clear"></div>

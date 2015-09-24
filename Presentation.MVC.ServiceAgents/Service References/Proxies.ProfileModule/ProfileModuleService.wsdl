@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProfileModuleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd5" namespace="Microsoft.Samples.DistributedServices.Core" />
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Application.MainBoundedContext.ProfileModule.Messaging" />
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Application.MainBoundedContext.DTO.ProfileModule" />
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Domain.Seedwork" />
+      <xsd:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProfileModuleService_AddFriend_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFriend" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddFriend_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFriendResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddFriend_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="Microsoft.Samples.DistributedServices.Core" name="detail" element="q1:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewMedia" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewMedia_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="Microsoft.Samples.DistributedServices.Core" name="detail" element="q2:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewPost" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewPost_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="Microsoft.Samples.DistributedServices.Core" name="detail" element="q3:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_AddNewProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="Microsoft.Samples.DistributedServices.Core" name="detail" element="q4:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeleteMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMedia" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeleteMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeleteMedia_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="Microsoft.Samples.DistributedServices.Core" name="detail" element="q5:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeletePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePost" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeletePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeletePost_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="Microsoft.Samples.DistributedServices.Core" name="detail" element="q6:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeleteProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeleteProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_DeleteProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q7="Microsoft.Samples.DistributedServices.Core" name="detail" element="q7:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_EnableProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnableProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_EnableProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnableProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_EnableProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="Microsoft.Samples.DistributedServices.Core" name="detail" element="q8:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindAbout_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAbout" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindAbout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAboutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindAbout_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q9="Microsoft.Samples.DistributedServices.Core" name="detail" element="q9:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindAchievements_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAchievements" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindAchievements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAchievementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindAchievements_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q10="Microsoft.Samples.DistributedServices.Core" name="detail" element="q10:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindBasicInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindBasicInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindBasicInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindBasicInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindBasicInfo_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="Microsoft.Samples.DistributedServices.Core" name="detail" element="q11:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindContact" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindContact_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q12="Microsoft.Samples.DistributedServices.Core" name="detail" element="q12:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriendRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindFriendRequests" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriendRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindFriendRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriendRequests_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="Microsoft.Samples.DistributedServices.Core" name="detail" element="q13:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriendRequestsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindFriendRequestsCount" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriendRequestsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindFriendRequestsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriendRequestsCount_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q14="Microsoft.Samples.DistributedServices.Core" name="detail" element="q14:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriends_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindFriends" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriends_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindFriendsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindFriends_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q15="Microsoft.Samples.DistributedServices.Core" name="detail" element="q15:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindLiving_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindLiving" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindLiving_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindLivingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindLiving_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q16="Microsoft.Samples.DistributedServices.Core" name="detail" element="q16:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMedia" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindMedia_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q17="Microsoft.Samples.DistributedServices.Core" name="detail" element="q17:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindMedias_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMedias" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindMedias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMediasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindMedias_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="Microsoft.Samples.DistributedServices.Core" name="detail" element="q18:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPost" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindPost_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="Microsoft.Samples.DistributedServices.Core" name="detail" element="q19:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPosts" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindPosts_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q20="Microsoft.Samples.DistributedServices.Core" name="detail" element="q20:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q21="Microsoft.Samples.DistributedServices.Core" name="detail" element="q21:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileByUserName_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q22="Microsoft.Samples.DistributedServices.Core" name="detail" element="q22:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfilePicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfilePicture" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfilePicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfilePictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfilePicture_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q23="Microsoft.Samples.DistributedServices.Core" name="detail" element="q23:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileStats" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileStats_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q24="Microsoft.Samples.DistributedServices.Core" name="detail" element="q24:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileSummary" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfileSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfileSummary_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q25="Microsoft.Samples.DistributedServices.Core" name="detail" element="q25:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindProfiles_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q26="Microsoft.Samples.DistributedServices.Core" name="detail" element="q26:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindResults" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindResults_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q27="Microsoft.Samples.DistributedServices.Core" name="detail" element="q27:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindResume" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindResume_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q28="Microsoft.Samples.DistributedServices.Core" name="detail" element="q28:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindSport_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSport" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindSport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindSport_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q29="Microsoft.Samples.DistributedServices.Core" name="detail" element="q29:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindWorkEdu_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindWorkEdu" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindWorkEdu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindWorkEduResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_FindWorkEdu_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q30="Microsoft.Samples.DistributedServices.Core" name="detail" element="q30:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_GetProfileViewCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileViewCounter" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_GetProfileViewCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileViewCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_GetProfileViewCounter_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q31="Microsoft.Samples.DistributedServices.Core" name="detail" element="q31:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_ManageFriendship_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManageFriendship" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_ManageFriendship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManageFriendshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_ManageFriendship_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q32="Microsoft.Samples.DistributedServices.Core" name="detail" element="q32:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_RemoveProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_RemoveProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_RemoveProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q33="Microsoft.Samples.DistributedServices.Core" name="detail" element="q33:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_SearchProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_SearchProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_SearchProfiles_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q34="Microsoft.Samples.DistributedServices.Core" name="detail" element="q34:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_SuggestFriends_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuggestFriends" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_SuggestFriends_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuggestFriendsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_SuggestFriends_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q35="Microsoft.Samples.DistributedServices.Core" name="detail" element="q35:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateAbout_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAbout" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateAbout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAboutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateAbout_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q36="Microsoft.Samples.DistributedServices.Core" name="detail" element="q36:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateAchievements_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAchievements" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateAchievements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAchievementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateAchievements_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q37="Microsoft.Samples.DistributedServices.Core" name="detail" element="q37:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateBasicInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBasicInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateBasicInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBasicInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateBasicInfo_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q38="Microsoft.Samples.DistributedServices.Core" name="detail" element="q38:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContact" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateContact_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q39="Microsoft.Samples.DistributedServices.Core" name="detail" element="q39:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateLiving_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLiving" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateLiving_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLivingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateLiving_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q40="Microsoft.Samples.DistributedServices.Core" name="detail" element="q40:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q41="Microsoft.Samples.DistributedServices.Core" name="detail" element="q41:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfilePicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfilePicture" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfilePicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfilePictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfilePicture_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q42="Microsoft.Samples.DistributedServices.Core" name="detail" element="q42:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfileSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileSummary" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfileSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateProfileSummary_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q43="Microsoft.Samples.DistributedServices.Core" name="detail" element="q43:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResults" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateResults_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q44="Microsoft.Samples.DistributedServices.Core" name="detail" element="q44:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResume" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateResume_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q45="Microsoft.Samples.DistributedServices.Core" name="detail" element="q45:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateSport_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSport" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateSport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateSport_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q46="Microsoft.Samples.DistributedServices.Core" name="detail" element="q46:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateWorkEdu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkEdu" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateWorkEdu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkEduResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileModuleService_UpdateWorkEdu_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q47="Microsoft.Samples.DistributedServices.Core" name="detail" element="q47:ServiceError" />
+  </wsdl:message>
+  <wsdl:portType name="IProfileModuleService">
+    <wsdl:operation name="AddFriend">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/AddFriend" message="tns:IProfileModuleService_AddFriend_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/AddFriendResponse" message="tns:IProfileModuleService_AddFriend_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/AddFriendApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_AddFriend_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewMedia" message="tns:IProfileModuleService_AddNewMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewMediaResponse" message="tns:IProfileModuleService_AddNewMedia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewMediaApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_AddNewMedia_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewPost" message="tns:IProfileModuleService_AddNewPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewPostResponse" message="tns:IProfileModuleService_AddNewPost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewPostApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_AddNewPost_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewProfile" message="tns:IProfileModuleService_AddNewProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewProfileResponse" message="tns:IProfileModuleService_AddNewProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/AddNewProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_AddNewProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/DeleteMedia" message="tns:IProfileModuleService_DeleteMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/DeleteMediaResponse" message="tns:IProfileModuleService_DeleteMedia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/DeleteMediaApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_DeleteMedia_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/DeletePost" message="tns:IProfileModuleService_DeletePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/DeletePostResponse" message="tns:IProfileModuleService_DeletePost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/DeletePostApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_DeletePost_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/DeleteProfile" message="tns:IProfileModuleService_DeleteProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/DeleteProfileResponse" message="tns:IProfileModuleService_DeleteProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/DeleteProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_DeleteProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/EnableProfile" message="tns:IProfileModuleService_EnableProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/EnableProfileResponse" message="tns:IProfileModuleService_EnableProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/EnableProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_EnableProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAbout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindAbout" message="tns:IProfileModuleService_FindAbout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindAboutResponse" message="tns:IProfileModuleService_FindAbout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindAboutApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindAbout_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAchievements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindAchievements" message="tns:IProfileModuleService_FindAchievements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindAchievementsResponse" message="tns:IProfileModuleService_FindAchievements_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindAchievementsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindAchievements_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBasicInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindBasicInfo" message="tns:IProfileModuleService_FindBasicInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindBasicInfoResponse" message="tns:IProfileModuleService_FindBasicInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindBasicInfoApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindBasicInfo_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindContact" message="tns:IProfileModuleService_FindContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindContactResponse" message="tns:IProfileModuleService_FindContact_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindContactApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindContact_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindFriendRequests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendRequests" message="tns:IProfileModuleService_FindFriendRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendRequestsResponse" message="tns:IProfileModuleService_FindFriendRequests_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendRequestsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindFriendRequests_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindFriendRequestsCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendRequestsCount" message="tns:IProfileModuleService_FindFriendRequestsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendRequestsCountResponse" message="tns:IProfileModuleService_FindFriendRequestsCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendRequestsCountApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindFriendRequestsCount_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindFriends">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriends" message="tns:IProfileModuleService_FindFriends_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendsResponse" message="tns:IProfileModuleService_FindFriends_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindFriendsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindFriends_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindLiving">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindLiving" message="tns:IProfileModuleService_FindLiving_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindLivingResponse" message="tns:IProfileModuleService_FindLiving_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindLivingApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindLiving_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindMedia" message="tns:IProfileModuleService_FindMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindMediaResponse" message="tns:IProfileModuleService_FindMedia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindMediaApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindMedia_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMedias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindMedias" message="tns:IProfileModuleService_FindMedias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindMediasResponse" message="tns:IProfileModuleService_FindMedias_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindMediasApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindMedias_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindPost" message="tns:IProfileModuleService_FindPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindPostResponse" message="tns:IProfileModuleService_FindPost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindPostApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindPost_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindPosts" message="tns:IProfileModuleService_FindPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindPostsResponse" message="tns:IProfileModuleService_FindPosts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindPostsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindPosts_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfile" message="tns:IProfileModuleService_FindProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileResponse" message="tns:IProfileModuleService_FindProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindProfileByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileByUserName" message="tns:IProfileModuleService_FindProfileByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileByUserNameResponse" message="tns:IProfileModuleService_FindProfileByUserName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileByUserNameApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindProfileByUserName_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindProfilePicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfilePicture" message="tns:IProfileModuleService_FindProfilePicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfilePictureResponse" message="tns:IProfileModuleService_FindProfilePicture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfilePictureApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindProfilePicture_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindProfileStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileStats" message="tns:IProfileModuleService_FindProfileStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileStatsResponse" message="tns:IProfileModuleService_FindProfileStats_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileStatsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindProfileStats_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindProfileSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileSummary" message="tns:IProfileModuleService_FindProfileSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileSummaryResponse" message="tns:IProfileModuleService_FindProfileSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfileSummaryApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindProfileSummary_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfiles" message="tns:IProfileModuleService_FindProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfilesResponse" message="tns:IProfileModuleService_FindProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindProfilesApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindProfiles_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindResults" message="tns:IProfileModuleService_FindResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindResultsResponse" message="tns:IProfileModuleService_FindResults_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindResultsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindResults_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindResume" message="tns:IProfileModuleService_FindResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindResumeResponse" message="tns:IProfileModuleService_FindResume_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindResumeApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindResume_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindSport" message="tns:IProfileModuleService_FindSport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindSportResponse" message="tns:IProfileModuleService_FindSport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindSportApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindSport_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindWorkEdu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/FindWorkEdu" message="tns:IProfileModuleService_FindWorkEdu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/FindWorkEduResponse" message="tns:IProfileModuleService_FindWorkEdu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/FindWorkEduApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_FindWorkEdu_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileViewCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/GetProfileViewCounter" message="tns:IProfileModuleService_GetProfileViewCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/GetProfileViewCounterResponse" message="tns:IProfileModuleService_GetProfileViewCounter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/GetProfileViewCounterApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_GetProfileViewCounter_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageFriendship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/ManageFriendship" message="tns:IProfileModuleService_ManageFriendship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/ManageFriendshipResponse" message="tns:IProfileModuleService_ManageFriendship_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/ManageFriendshipApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_ManageFriendship_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/RemoveProfile" message="tns:IProfileModuleService_RemoveProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/RemoveProfileResponse" message="tns:IProfileModuleService_RemoveProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/RemoveProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_RemoveProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/SearchProfiles" message="tns:IProfileModuleService_SearchProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/SearchProfilesResponse" message="tns:IProfileModuleService_SearchProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/SearchProfilesApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_SearchProfiles_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuggestFriends">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/SuggestFriends" message="tns:IProfileModuleService_SuggestFriends_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/SuggestFriendsResponse" message="tns:IProfileModuleService_SuggestFriends_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/SuggestFriendsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_SuggestFriends_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAbout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateAbout" message="tns:IProfileModuleService_UpdateAbout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateAboutResponse" message="tns:IProfileModuleService_UpdateAbout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateAboutApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateAbout_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAchievements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateAchievements" message="tns:IProfileModuleService_UpdateAchievements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateAchievementsResponse" message="tns:IProfileModuleService_UpdateAchievements_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateAchievementsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateAchievements_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasicInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateBasicInfo" message="tns:IProfileModuleService_UpdateBasicInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateBasicInfoResponse" message="tns:IProfileModuleService_UpdateBasicInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateBasicInfoApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateBasicInfo_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateContact" message="tns:IProfileModuleService_UpdateContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateContactResponse" message="tns:IProfileModuleService_UpdateContact_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateContactApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateContact_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLiving">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateLiving" message="tns:IProfileModuleService_UpdateLiving_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateLivingResponse" message="tns:IProfileModuleService_UpdateLiving_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateLivingApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateLiving_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfile" message="tns:IProfileModuleService_UpdateProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfileResponse" message="tns:IProfileModuleService_UpdateProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfilePicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfilePicture" message="tns:IProfileModuleService_UpdateProfilePicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfilePictureResponse" message="tns:IProfileModuleService_UpdateProfilePicture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfilePictureApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateProfilePicture_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfileSummary" message="tns:IProfileModuleService_UpdateProfileSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfileSummaryResponse" message="tns:IProfileModuleService_UpdateProfileSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateProfileSummaryApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateProfileSummary_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateResults" message="tns:IProfileModuleService_UpdateResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateResultsResponse" message="tns:IProfileModuleService_UpdateResults_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateResultsApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateResults_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateResume" message="tns:IProfileModuleService_UpdateResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateResumeResponse" message="tns:IProfileModuleService_UpdateResume_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateResumeApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateResume_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateSport" message="tns:IProfileModuleService_UpdateSport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateSportResponse" message="tns:IProfileModuleService_UpdateSport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateSportApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateSport_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkEdu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateWorkEdu" message="tns:IProfileModuleService_UpdateWorkEdu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateWorkEduResponse" message="tns:IProfileModuleService_UpdateWorkEdu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProfileModuleService/UpdateWorkEduApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:IProfileModuleService_UpdateWorkEdu_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicPhoenix" type="tns:IProfileModuleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddFriend">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/AddFriend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMedia">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/AddNewMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPost">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/AddNewPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewProfile">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/AddNewProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMedia">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/DeleteMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/DeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/DeleteProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EnableProfile">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/EnableProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindAbout">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindAbout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindAchievements">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindAchievements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindBasicInfo">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindBasicInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindContact">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindFriendRequests">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindFriendRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindFriendRequestsCount">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindFriendRequestsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindFriends">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindFriends" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindLiving">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindLiving" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindMedia">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindMedias">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindMedias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindPost">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindPosts">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindProfile">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindProfileByUserName">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindProfileByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindProfilePicture">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindProfilePicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindProfileStats">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindProfileStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindProfileSummary">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindProfileSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindProfiles">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindResults">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindResume">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindSport">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindSport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindWorkEdu">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/FindWorkEdu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileViewCounter">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/GetProfileViewCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManageFriendship">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/ManageFriendship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProfile">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/RemoveProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProfiles">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/SearchProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuggestFriends">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/SuggestFriends" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAbout">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateAbout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAchievements">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateAchievements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasicInfo">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateBasicInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLiving">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateLiving" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfilePicture">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateProfilePicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileSummary">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateProfileSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResults">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResume">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSport">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateSport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkEdu">
+      <soap:operation soapAction="http://tempuri.org/IProfileModuleService/UpdateWorkEdu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProfileModuleService">
+    <wsdl:port name="basicPhoenix" binding="tns:basicPhoenix">
+      <soap:address location="http://localhost:2626/ProfileModuleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

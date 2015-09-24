@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Application.MainBoundedContext.ProfileModule.Messaging" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Phoenix.PhoenixApp.Application.MainBoundedContext.ProfileModule.Messaging" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2626/ProfileModuleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AddFriendRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Acceptor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddFriendRequest" nillable="true" type="tns:AddFriendRequest" />
+  <xs:complexType name="RequestBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Requester" nillable="true" type="tns:Requester" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestBase" nillable="true" type="tns:RequestBase" />
+  <xs:complexType name="Requester">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Requester" nillable="true" type="tns:Requester" />
+  <xs:complexType name="FindFriendsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PagedRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FindFriendsRequest" nillable="true" type="tns:FindFriendsRequest" />
+  <xs:complexType name="PagedRequestBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PagedRequestBase" nillable="true" type="tns:PagedRequestBase" />
+  <xs:complexType name="FindProfileRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="Touch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FindProfileRequest" nillable="true" type="tns:FindProfileRequest" />
+  <xs:complexType name="FindProfileStatsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PagedRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FindProfileStatsRequest" nillable="true" type="tns:FindProfileStatsRequest" />
+  <xs:complexType name="ManageFriendshipRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FriendshipId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RequestType" type="tns:ManageFriendshipRequestType" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManageFriendshipRequest" nillable="true" type="tns:ManageFriendshipRequest" />
+  <xs:simpleType name="ManageFriendshipRequestType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Accept" />
+      <xs:enumeration value="Reject" />
+      <xs:enumeration value="Cancel" />
+      <xs:enumeration value="Unfriend" />
+      <xs:enumeration value="AcceptByUsername" />
+      <xs:enumeration value="RejectByUsername" />
+      <xs:enumeration value="UnfriendByUsername" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ManageFriendshipRequestType" nillable="true" type="tns:ManageFriendshipRequestType" />
+  <xs:complexType name="FindProfilesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExcludeRequester" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FindProfilesRequest" nillable="true" type="tns:FindProfilesRequest" />
+</xs:schema>

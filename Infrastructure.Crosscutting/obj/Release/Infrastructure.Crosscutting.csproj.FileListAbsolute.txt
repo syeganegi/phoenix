@@ -1,0 +1,7 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\bin\Release\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\bin\Release\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\obj\Release\Infrastructure.Crosscutting.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\obj\Release\Phoenix.PhoenixApp.Infrastructure.Crosscutting.Resources.Messages.resources
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\obj\Release\Infrastructure.Crosscutting.csproj.GenerateResource.Cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\obj\Release\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting\obj\Release\PhoenixApp.Infrastructure.Crosscutting.pdb

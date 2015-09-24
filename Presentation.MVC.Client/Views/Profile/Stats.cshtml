@@ -1,0 +1,37 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileStatsModel[]
+@{
+    ViewBag.Title = "Profile Stats";
+}
+<style>
+    .SearchProfileName {
+        color: #6bb130;
+        font-weight: bold;
+     }
+    </style>
+<h2>@ViewBag.Title</h2>
+<div style="height: 20px;"></div>
+<h3>Who’s Viewed Your Profile</h3>
+<div style="height: 10px;"></div>
+@if (Model != null && Model.Any())
+{
+    <ul style="list-style-type: none ;width: 100%;">
+        @foreach (var profile in Model)
+        {
+               <li style="display: block; clear: both; height: 50px; border: solid 1px gainsboro; padding: 10px 10px; margin-bottom: 5px;">
+                <div style="float: left; width: 50px; margin-right: 5px;">
+                    <img src="@Url.Action(MVCT.Profile.Picture(profile.UserName))" style="border: solid 1px #fff; width: 50px; height: 50px;" /></div>
+                <div style="float: left; width: 450px; margin-left: 10px;">@Html.ActionLink(profile.FullName, MVCT.Profile.Index(profile.UserName), new { @class = "SearchProfileName"})<br />
+                      <font style="font-size: 12px; font-weight: bold;">@Html.Encode(profile.Sport)</font>
+                </div>
+                <div style="float: right;  text-transform: uppercase;">@Html.ToDaysAgo(profile.DateViewed)</div>
+                  <div class="clear"></div>
+              
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No result.</p>
+}

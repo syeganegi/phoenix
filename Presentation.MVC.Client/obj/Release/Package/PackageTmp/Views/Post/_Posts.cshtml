@@ -1,0 +1,28 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule
+@model PostsModel
+<script type="text/javascript">
+    $(document).ready(function () {
+        bindDelete();
+    });
+
+    function bindDelete() {
+        $(".delete-post").click(function (event) {
+            if (!confirm("Are you sure to delete the post?"))
+                return;
+            $.post(
+                "@Url.Action(MVCT.Post.Delete())",
+                { id: event.target.id },
+                function (data) {
+                    $('#postList').html(data);
+                })
+            .success(function () { bindDelete(); })
+            .error(function () { alert("error deleting post"); });
+        });
+    }
+</script>
+@if (Model.UserName.Equals(this.CurrentProfile.UserName, StringComparison.OrdinalIgnoreCase))
+{
+    @Html.Partial(MVCT.Post.Views._Create, new PostModel())
+}
+
+@Html.Partial(MVCT.Post.Views._PostsList, Model.Posts)

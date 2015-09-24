@@ -1,0 +1,11 @@
+﻿@model Object
+@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@using Phoenix.PhoenixApp.Presentation.MVC.Models.Account
+@{
+    var sexModel = Sex.Unknown;
+    if (Model is Sex)
+    {
+        sexModel = (Sex)Model;
+    }
+}
+@Html.SexDropDownListFor(model => model, sexModel)

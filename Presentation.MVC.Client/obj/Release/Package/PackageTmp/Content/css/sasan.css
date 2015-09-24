@@ -1,0 +1,288 @@
+﻿h2 {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+.profile {
+    
+}
+
+    .profile fieldset {
+        background-color: #FFFFFF;
+        margin: 0px 10px 0px 0px;
+        /*border: solid 1px gainsboro;*/
+        padding: 10px;
+    }
+
+        .profile fieldset legend {
+            display: none;
+        }
+
+
+        .profile fieldset h1,
+        .profile fieldset .editlink {
+            padding: 3px 0px 3px 0px;
+            margin: 0px;
+        }
+
+        .profile fieldset h1 {
+            font-size: 16px;
+            font-weight: bold;
+          
+            color: #333333;
+            display: inline;
+           
+            float: left;
+        }
+
+        .profile fieldset .editlink {
+            float: right;
+            width: 40%;
+            text-align: right;
+            clear: right;
+        }
+
+           .profile fieldset .editlink:hover {
+               color: #6bb130;
+               font-weight: bold;
+        }
+
+.display-label, .display-field {
+    padding: 10px 0 5px 0;
+}
+
+.display-label {
+    float: left;
+    width: 150px;
+    clear: left;
+    color: #666;
+    font-size: 12px;
+}
+
+.display-field {
+    float: left;
+    font-weight: bold;
+    clear: right;
+     font-size: 12px;
+    margin-left: 5px;
+    color: #222;
+}
+
+.editor-label {
+    float: left;
+    width: 150px;
+    clear: left;
+    color: #666;
+    font-size: 12px;
+}
+
+.editor-field {
+    
+}
+
+select {
+    line-height: 20px;
+    height: 30px;
+    padding: 6px;
+    background-color: #f5f5f5;
+    border: 1px solid #CCC;
+    color: #999;
+    font-size: 13px;
+}
+input[type="text"], textarea, input[type="datetime"],
+input[type="password"], input[type="search"] {
+    line-height: 20px;
+    height: 20px;
+    min-width: 200px;
+}
+
+input[type="textarea"], body textarea, input[type="datetime"]
+{
+    min-width: 200px;
+}
+
+input[type="textarea"], input[type="text"], input[type="datetime"], body textarea {
+    padding: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #CCC;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="textarea"]:focus, input[type="text"]:focus, input[type="datetime"]:focus, body textarea:focus {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #6bb130;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="textarea"]:hover, input[type="text"]:hover, input[type="datetime"]:hover, body textarea:hover {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #6bb130;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+body .button, input[type="submit"], input[type="button"] {
+    color: #ffffff;
+    background: #222222;
+    padding: 5px 10px;
+    border: 0;
+    
+}
+
+
+
+body .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    color: #ffffff;
+    background: #6bb130;
+    padding: 5px 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.text-box {
+     line-height: 20px;
+    height: 20px;
+    min-width: 200px;
+
+     padding: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #CCC;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text-box:focus {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #6bb130;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text-box:hover {
+      padding: 5px;
+    background-color: #fff;
+    border: 1px solid #6bb130;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.table-button {
+     color: #ffffff;
+    background: #222222;
+    padding: 2px 10px;
+    border: 0;
+    font-size: 11px;
+    font-weight: bold;
+  
+}
+
+.table-button:hover {
+      color: #ffffff;
+    background: #6bb130;
+    padding: 2px 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.field-line {
+    clear: both;
+    border-bottom: 1px dotted #ececec;
+}
+
+.searchItem {
+    min-height: 51px;
+    clear: both;
+}
+.searchItem img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid gainsboro;
+    margin-right: 3px;
+    display: block;
+}
+
+.searchItem a {
+    float: left;
+    font-size: 0.8em;
+    width: 210px;
+}
+
+.searchItem .text {
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.searchItem .category {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.editor-label {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.validation-summary-errors ,
+.field-validation-error
+{
+    color: red;
+}
+
+.page-subheader {
+    font-size: 16px;
+    color: #444444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.editlink {
+  
+    width: 718px;
+    padding-right: 20px;
+      
+}
+
+.editlink a {
+     font-size: 12px;
+        background: #ebebeb;
+        padding: 3px 5px 3px 7px;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+        color: #666666;
+        font-weight: bold;
+}
+
+    .editlink a:hover {
+        background: #6bb130;
+        border: 1px solid #51b000;
+        color: #ffffff;
+    }
+
+    .edit-view-table {
+        width: 100%;
+    }
+
+    .edit-view-table tr {
+        border-bottom: 1px dotted #eeeeee;
+        padding-bottom: 2px;
+    }

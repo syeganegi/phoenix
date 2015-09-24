@@ -1,0 +1,40 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileModel[]
+@{
+    ViewBag.Title = "Suggested Friends";
+}
+
+<style>
+    .SearchProfileName {
+        color: #6bb130;
+        font-weight: bold;
+    }
+</style>
+
+<h2>@ViewBag.Title</h2>
+<div class="gap15"></div>
+@if (Model != null)
+{
+    <ul style="list-style-type: none; width: 100%;">
+        @foreach (var profileModel in Model)
+        {
+            <li style="display: block; clear: both; height: 50px; border: solid 1px gainsboro; padding: 10px 10px; margin-bottom: 5px;">
+                <div style="float: left; width: 50px; margin-right: 5px;">
+                    <a href="@Url.Action(MVCT.Profile.Index(profileModel.UserName))">
+                        <img src="@Url.Action(MVCT.Profile.Picture(profileModel.UserName))" style="border: solid 1px #fff; width: 50px; height: 50px;" /></a>
+                </div>
+                <div style="float: left; width: 450px; margin-left: 10px; margin-bottom: 5px;">@Html.ActionLink(profileModel.FullName, MVCT.Profile.Index(profileModel.UserName), new { @class = "SearchProfileName" })<br />
+                    <font style="font-size: 12px; font-weight: bold;">@Html.Encode(profileModel.Sport)</font>
+                </div>
+                <div style="float: right; ">
+                    @Html.ActionLink("Add Friend", MVCT.Friend.Add(profileModel.UserName), new { @class = "table-button" })
+                </div>
+                <div class="clear"></div>
+
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No suggested friends.</p>
+}

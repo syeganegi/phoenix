@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{892E1A7D-46A4-44DC-8202-58CE8C3791CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents</RootNamespace>
+    <AssemblyName>PhoenixApp.MVC.ServiceAgents</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=2.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.2.2.1-ci9000\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.3.12303\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.3.12303\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.3.12303\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.3.12303\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.3.12303\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.3.12303\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Math">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.3.12303\lib\net45-full\Mono.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Mentalis.Security.Cryptography">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.3.12303\lib\net45-full\Org.Mentalis.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Messages.Designer.cs">
+      <DependentUpon>Messages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Service References\Proxies.ProfileModule\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AccountMvcService.cs" />
+    <Compile Include="Services\FriendMvcService.cs" />
+    <Compile Include="Services\IAccountMvcService.cs" />
+    <Compile Include="Services\IFriendMvcService.cs" />
+    <Compile Include="Services\IProfileMvcService.cs" />
+    <Compile Include="Mappers\MappersExtensionMethods.cs" />
+    <Compile Include="Mappers\ModelProfile.cs" />
+    <Compile Include="ServiceAgentException.cs" />
+    <Compile Include="Services\ProfileMvcService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\RequesterFactory.cs" />
+    <Compile Include="UsersContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.AboutDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.AchievementsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.BasicInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ContactDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.FriendshipDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.LivingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.MediaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.PostDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfileCounterDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfileListDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfilePictureDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfileSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfileStatsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ProfileSummaryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ResultsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.ResumeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.SportDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Phoenix.PhoenixApp.Presentation.MVC.ServiceAgents.Proxies.ProfileModule.WorkEduDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService.wsdl" />
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Crosscutting\Infrastructure.Crosscutting.csproj">
+      <Project>{106C7F00-C03F-4E29-87AF-ACD1BA292078}</Project>
+      <Name>Infrastructure.Crosscutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC.Models\MVC.Models.csproj">
+      <Project>{5563085e-4bb9-4f37-8513-940990e1e3c7}</Project>
+      <Name>MVC.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation.MVC.Common\MVC.Common.csproj">
+      <Project>{ea38f161-b541-413e-bf25-a130e9c5e384}</Project>
+      <Name>MVC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentation.Seedwork\Presentation.Seedwork.csproj">
+      <Project>{9ECCC51A-D4F0-4CA5-9F84-E85A732F86F9}</Project>
+      <Name>Presentation.Seedwork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Proxies.ProfileModule\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Proxies.ProfileModule\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Proxies.ProfileModule\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Proxies.ProfileModule\ProfileModuleService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxies.ProfileModule\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

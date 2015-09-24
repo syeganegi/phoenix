@@ -1,0 +1,9 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\bin\Debug\PhoenixApp.DistributedServices.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\bin\Debug\PhoenixApp.DistributedServices.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\bin\Debug\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\bin\Debug\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\obj\Debug\DistributedServices.Seedwork.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\obj\Debug\Phoenix.PhoenixApp.DistributedServices.Seedwork.Resources.Messages.resources
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\obj\Debug\DistributedServices.Seedwork.csproj.GenerateResource.Cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\obj\Debug\PhoenixApp.DistributedServices.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\DistributedServices.Seedwork\obj\Debug\PhoenixApp.DistributedServices.Seedwork.pdb

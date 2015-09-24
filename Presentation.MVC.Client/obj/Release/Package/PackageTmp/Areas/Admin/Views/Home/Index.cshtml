@@ -1,0 +1,63 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.Admin.ProfileListAdminModel
+@{
+    ViewBag.Title = "Admin";
+}
+
+<style>
+    .admin-profilelist-table {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+        .admin-profilelist-table thead {
+            background: #6bb130;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+        }
+
+        .admin-profilelist-table tbody tr {
+            height: 30px;
+            border-bottom: 1px dashed #cccccc;
+        }
+
+         .admin-profilelist-table tbody tr:hover td {
+             background: #eee;
+         }
+
+         .admin-profilelist-table tbody tr td{
+             padding: 5px;
+         }
+
+</style>
+
+<h2>Manage Profiles</h2>
+@if (Model != null)
+{
+    <table class="admin-profilelist-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Sport</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var profile in Model.Profiles)
+            {
+                <tr>
+                    <td style="color: #6bb130; font-weight: bold; border-right: 1px dashed #cccccc; padding: 5px;">@Html.ActionLink(profile.FullName, MVCT.Profile.Index(profile.UserName))</td>
+                    <td style="border-right: 1px dashed #cccccc; padding: 5px;">@profile.Sport</td>
+                    <td align="center"  style="width: 80px">
+                        @Html.ActionLink("Edit", MVCT.Admin.Home.Edit(profile.Id), new { @class = "table-button"})
+                    </td>
+                    <td align="center" style="width: 80px">
+                        @Html.ActionLink("Delete", MVCT.Admin.Home.Delete(profile.Id), new { @class = "table-button"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

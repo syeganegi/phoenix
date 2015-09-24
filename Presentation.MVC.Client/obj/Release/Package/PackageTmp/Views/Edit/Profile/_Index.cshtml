@@ -1,0 +1,37 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileSummaryModel
+
+<script type="text/javascript">
+    function profileEditClose() {
+        $("#profile-edit").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#profile-edit-close-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#profile-view").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#profile-edit-open-div").animate({ height: 'toggle' }).fadeIn("slow");
+    }
+
+    function profileEditOpen() {
+        $("#profile-view").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#profile-edit-open-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#profile-edit").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#profile-edit-close-div").animate({ height: 'toggle' }).fadeIn("slow");
+        $.validator.unobtrusive.parse($("#profile-form-submit"));
+    }
+
+    $(function () {
+        $("#profile-edit").hide();
+        $("#profile-edit-close-div").hide();
+        $("#profile-edit-open").click(profileEditOpen);
+        $("#profile-edit-close").click(profileEditClose);
+    });
+
+</script>
+
+<div id="profile-edit-open-div" class="editlink"><a id="profile-edit-open" style="float: right;"><i class="icon-pencil-3"></i>Edit</a></div>
+<div id="profile-edit-close-div" class="editlink"><a id="profile-edit-close" style="float: right;">Cancel</a></div>
+<div class="gap10"></div>
+<div id="profile-view">
+    @Html.Partial(MVCT.Edit.Views.Profile._View)
+</div>
+<div id="profile-edit">
+    @Html.Partial(MVCT.Edit.Views.Profile._Edit)
+</div>
+<div class="clear"></div>

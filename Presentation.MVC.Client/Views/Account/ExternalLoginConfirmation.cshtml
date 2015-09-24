@@ -1,0 +1,102 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@model Phoenix.PhoenixApp.Presentation.MVC.Models.Account.RegisterExternalLoginModel
+@{
+    this.ViewBag.Title = "Register";
+    this.Layout = MVCT.Shared.Views._LoginLayout;
+}
+
+<div class="registerBox">
+    <div class="registerBox-header">Associate your Facebook account.</div>
+
+    @using (this.Html.BeginForm("ExternalLoginConfirmation", "Account", new { this.ViewBag.ReturnUrl }))
+    {
+        @Html.HiddenFor(m => m.ImageUrl)
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+       
+        <p>
+            You've successfully authenticated with <strong>@this.ViewBag.ProviderDisplayName</strong>.
+        Please enter a user name for this site below and click the Confirm button to finish
+        logging in.
+        </p>
+        <table>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ImageFor(m => m.ImageUrl)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.UserName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.UserName, new { @class="loginBox_textbox"})
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.FirstName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.FirstName, new { @class="loginBox_textbox"})
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.LastName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.LastName, new { @class="loginBox_textbox"})
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Email)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Email, new { @class="loginBox_textbox"})
+                    @Html.ValidationMessageFor(m => m.Email)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Sex)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.Sex)
+                    @Html.ValidationMessageFor(m => m.Sex)
+                </td>
+            </tr>
+              <tr>
+                <td style="height: 5px;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Birthday)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.Birthday)
+                    @Html.ValidationMessageFor(m => m.Birthday)
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 15px;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>@Html.HiddenFor(m => m.ExternalLoginData)
+                    <input type="submit" value="Register" style="width: 225px; height: 40px;" /></td>
+            </tr>
+        </table>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

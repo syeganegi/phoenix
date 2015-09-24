@@ -1,0 +1,102 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        $("#searchinput").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "@Url.Action(MVCT.Search.Lookup())",
+                    dataType: "json",
+                    type: "POST",
+                    data: {term: request.term},
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return item;
+                        }));
+                    }
+                });
+            },
+            focus: function (event, ui) {
+                $("#searchinput").val(ui.item.label);
+                return false;
+            },
+            select: function (event, ui) {
+                window.location = ui.item.profile;
+            }
+        })
+        .data("autocomplete")._renderItem = function (ul, item) {
+            return $("<li class=\"searchItem\">")
+                .data("item.autocomplete", item)
+                .append("<a><img src=\"" + item.picture + "\" alt=\"" + item.label + "\" /><span class=\"text\">" + item.label + "</span>" + (item.sport != null ? "<span class=\"category\">" + item.sport + "</span></li>" : ""))
+                .appendTo(ul);
+        };
+    });
+    
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+    DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('click', function (event) {
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    };
+
+    $(function () {
+
+        var dd = new DropDown($('#dd'));
+
+        $(document).click(function () {
+            // all dropdowns
+            $('.top-menu-dropdown').removeClass('active');
+        });
+
+    });
+ </script>
+<!-- Logo Starts -->
+<div class="grid_164">
+    <div id="logo">
+        <a href="@Url.Action(MVCT.Home.Index())"><img src="@Url.Content("/Content/Images/ESIOne_logo_small.png")" style="height: 40px;"/></a>
+    </div>
+</div>
+<!-- Logo Ends -->
+
+<!-- Top Menu Starts -->
+<div class="grid_820">
+    <div id="top-menu">
+        @if (this.Request.IsAuthenticated)
+        {
+            <div class="top-menu-dropdown" id="dd" tabindex="1">
+                @this.CurrentProfile.FullName<i class="icon-arrow-down-2" style="font-size: 14px;"></i>
+                <ul class="dropdown">
+                    <li><a href="@Url.Action(MVCT.Edit.Index())"><i class="icon-user"></i>Edit Profile</a></li>
+                    <li><a href="@Url.Action(MVCT.Account.Manage())"><i class="icon-cog"></i>Settings</a></li>
+                    <li>
+                        @using (this.Html.BeginForm(MVCT.Account.LogOff(), FormMethod.Post, new { id = "logoutForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <a href="javascript:document.getElementById('logoutForm').submit()"><i class="icon-exit"></i>Log off</a>
+                        }
+                    </li>
+                </ul>
+            </div>
+            if (Roles.IsUserInRole("Administrator"))
+            {
+                <a href="@Url.Action(MVCT.Admin.Home.Index())" class="top-menu-dropdown"><i class="icon-user-5"></i>&nbsp;Admin</a>
+            }
+            <a href="@Url.Action(MVCT.Home.Index())" class="top-menu-dropdown" id="topbar2"><i class="icon-home"></i>&nbsp;Home</a>
+            using (Html.BeginForm(MVCT.Search.Index(), FormMethod.Post))
+            {
+                 <div class="search-box">
+                     <input class="search-input" name="searchinput" id="searchinput"/>
+                     <button class="search-button" type="submit"><i class="icon-search-3"></i>Search</button>
+                 </div>
+            }
+        }
+    </div>
+</div>
+<!-- Top Menu Ends -->

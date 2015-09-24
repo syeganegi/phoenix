@@ -1,0 +1,19 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.LivingModel
+<fieldset>
+    <h1>Living</h1>
+    <div class="editlink"><i class="icon-pencil-3"></i>@Html.EditLink(Model.UserName, MVCT.Edit.Living())</div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CurrentCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CurrentCity)
+    </div>
+     <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Hometown)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Hometown)
+    </div>
+</fieldset>

@@ -1,0 +1,23 @@
+﻿@model PostModel[]
+@using Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule
+
+<div class="tabs_Tweets">
+    
+
+    <div id="postList">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var postModel in Model)
+            {
+            @Html.Partial(MVCT.Post.Views._Post, postModel)
+            }
+        }
+        else
+        {
+            <div id="noPost">
+                <p>No Shout found</p>
+            </div>
+        }
+    </div>
+
+</div>

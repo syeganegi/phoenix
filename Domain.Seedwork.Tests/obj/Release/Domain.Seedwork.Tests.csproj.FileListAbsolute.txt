@@ -1,0 +1,7 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\bin\Release\Domain.Seedwork.Tests.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\bin\Release\Domain.Seedwork.Tests.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\bin\Release\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\bin\Release\PhoenixApp.Domain.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\obj\Release\Domain.Seedwork.Tests.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\obj\Release\Domain.Seedwork.Tests.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork.Tests\obj\Release\Domain.Seedwork.Tests.pdb

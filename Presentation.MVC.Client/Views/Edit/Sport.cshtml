@@ -1,0 +1,91 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.SportModel
+@{
+    ViewBag.Title = "Sport";
+}
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="display-label">
+            @Html.LabelFor(model => model.Sport)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.Sport)
+            @Html.ValidationMessageFor(model => model.Sport)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.CurrentClubTeam)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.CurrentClubTeam)
+            @Html.ValidationMessageFor(model => model.CurrentClubTeam)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.ContractDateFrom)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.ContractDateFrom)
+            @Html.ValidationMessageFor(model => model.ContractDateFrom)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.ManagementCompany)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.ManagementCompany)
+            @Html.ValidationMessageFor(model => model.ManagementCompany)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.PlayingPosition)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.PlayingPosition)
+            @Html.ValidationMessageFor(model => model.PlayingPosition)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.SportAchievements)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.SportAchievements)
+            @Html.ValidationMessageFor(model => model.SportAchievements)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.SchoolAchievements)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.SchoolAchievements)
+            @Html.ValidationMessageFor(model => model.SchoolAchievements)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.FavoriteOtherSport)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.FavoriteOtherSport)
+            @Html.ValidationMessageFor(model => model.FavoriteOtherSport)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.FavoriteSportingIdol)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.FavoriteSportingIdol)
+            @Html.ValidationMessageFor(model => model.FavoriteSportingIdol)
+        </div>
+        <div class="display-label">
+            @Html.LabelFor(model => model.OverseasOpportunities)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.OverseasOpportunities)
+            @Html.ValidationMessageFor(model => model.OverseasOpportunities)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to Profile", MVCT.Edit.Index())
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

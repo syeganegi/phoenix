@@ -1,0 +1,38 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.AboutModel
+
+<script type="text/javascript">
+    function aboutEditClose() {
+        $("#about-edit").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#about-edit-close-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#about-view").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#about-edit-open-div").animate({ height: 'toggle' }).fadeIn("slow");
+    }
+
+    function aboutEditOpen() {
+        $("#about-view").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#about-edit-open-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#about-edit").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#about-edit-close-div").animate({ height: 'toggle' }).fadeIn("slow");
+        $.validator.unobtrusive.parse($("#about-form-submit"));
+    }
+
+    $(function () {
+        $("#about-texteditor").cleditor();
+        $("#about-edit").hide();
+        $("#about-edit-close-div").hide();
+        $("#about-edit-open").click(aboutEditOpen);
+        $("#about-edit-close").click(aboutEditClose);
+    });
+
+</script>
+
+<div id="about-edit-open-div" class="editlink"><a id="about-edit-open" style="float: right;"><i class="icon-pencil-3"></i>Edit</a></div>
+<div id="about-edit-close-div" class="editlink"><a id="about-edit-close" style="float: right;">Cancel</a></div>
+<div class="gap10"></div>
+<div id="about-view">
+    @Html.Partial(MVCT.Edit.Views.About._View)
+</div>
+<div id="about-edit">
+    @Html.Partial(MVCT.Edit.Views.About._Edit)
+</div>
+<div class="clear"></div>

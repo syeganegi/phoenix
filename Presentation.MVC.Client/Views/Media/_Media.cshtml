@@ -1,0 +1,26 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.MediaModel
+<div style="padding: 10px; border-top: 1px solid gainsboro;">
+    <div>
+        <label style="color: #000; font-size: 14px; font-weight: bold; margin-bottom: 5px;">@Html.DisplayFor(model => model.Title)</label>    
+    </div>
+    
+    @if (Model.Type.Equals("Video"))
+{
+    <object width="560" height="315" style="margin: 0 auto;">
+        <param name="movie" value="@Html.AttributeEncode(@Model.MediaUrl + "?hl=en_US&amp;version=3&amp;rel=0")" />
+        <param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" />
+        <embed src="@Html.AttributeEncode(@Model.MediaUrl + "?hl=en_US&amp;version=3&amp;rel=0")" type="application/x-shockwave-flash" width="560" height="315" />
+    </object>        
+}
+else if (Model.Type.Equals("Image"))
+{
+    <img src="@Model.MediaUrl" alt="@Model.Title" width="560" style="margin: 0 auto;">
+    }
+    <div>
+        <label style="color: #000; font-size: 14px; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Added: @Html.DisplayFor(model => model.DateCreated)</label>
+        </div>
+    @if (Model.ProfileId == this.CurrentProfile.Id)
+    {
+        <input type="button" class="delete-media" id="@Model.Id" value="Delete" />
+    }
+</div>

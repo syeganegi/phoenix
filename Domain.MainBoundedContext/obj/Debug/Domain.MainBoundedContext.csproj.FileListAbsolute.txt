@@ -1,0 +1,11 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\bin\Debug\PhoenixApp.Domain.MainBoundedContext.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\bin\Debug\PhoenixApp.Domain.MainBoundedContext.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\bin\Debug\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\bin\Debug\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\bin\Debug\PhoenixApp.Domain.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\bin\Debug\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\obj\Debug\Domain.MainBoundedContext.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\obj\Debug\Phoenix.PhoenixApp.Domain.MainBoundedContext.Resources.Messages.resources
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\obj\Debug\Domain.MainBoundedContext.csproj.GenerateResource.Cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\obj\Debug\PhoenixApp.Domain.MainBoundedContext.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.MainBoundedContext\obj\Debug\PhoenixApp.Domain.MainBoundedContext.pdb

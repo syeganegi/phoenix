@@ -1,0 +1,28 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ResumeModel
+@using (Ajax.BeginForm(MVCT.Edit.Resume(), new AjaxOptions
+       {
+           UpdateTargetId = "resume-view",
+           InsertionMode = InsertionMode.Replace,
+           OnSuccess = "resumeEditClose",
+           OnFailure = "onAjaxFormFaliure",
+           HttpMethod = "Post"
+       },
+       new { id = "resume-form-submit" }))
+{
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td class="editor-field">
+                @Html.TextAreaFor(model => model.Resume, new { @id = "resume-texteditor" })
+                @Html.ValidationMessageFor(model => model.Resume)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+}

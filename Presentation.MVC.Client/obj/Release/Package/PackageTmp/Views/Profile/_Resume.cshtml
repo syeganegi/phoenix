@@ -1,0 +1,6 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+
+<div class="tabs_Resume">
+    <div class="tabs-header">Resume</div>
+  @Html.Raw(HttpUtility.HtmlDecode(Model.Resume.Resume)) 
+</div>

@@ -1,0 +1,38 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.AchievementsModel
+
+<script type="text/javascript">
+    function achievementsEditClose() {
+        $("#achievements-edit").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#achievements-edit-close-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#achievements-view").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#achievements-edit-open-div").animate({ height: 'toggle' }).fadeIn("slow");
+    }
+
+    function achievementsEditOpen() {
+        $("#achievements-view").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#achievements-edit-open-div").animate({ height: 'toggle' }).fadeOut("slow");
+        $("#achievements-edit").animate({ height: 'toggle' }).fadeIn("slow");
+        $("#achievements-edit-close-div").animate({ height: 'toggle' }).fadeIn("slow");
+        $.validator.unobtrusive.parse($("#achievements-form-submit"));
+    }
+
+    $(function () {
+        $("#achievements-texteditor").cleditor();
+        $("#achievements-edit").hide();
+        $("#achievements-edit-close-div").hide();
+        $("#achievements-edit-open").click(achievementsEditOpen);
+        $("#achievements-edit-close").click(achievementsEditClose);
+    });
+
+</script>
+
+<div id="achievements-edit-open-div" class="editlink"><a id="achievements-edit-open" style="float: right;"><i class="icon-pencil-3"></i>Edit</a></div>
+<div id="achievements-edit-close-div" class="editlink"><a id="achievements-edit-close" style="float: right;">Cancel</a></div>
+<div class="gap10"></div>
+<div id="achievements-view">
+    @Html.Partial(MVCT.Edit.Views.Achievements._View)
+</div>
+<div id="achievements-edit">
+    @Html.Partial(MVCT.Edit.Views.Achievements._Edit)
+</div>
+<div class="clear"></div>

@@ -1,0 +1,131 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.Account.LoginModel
+
+@{
+    this.ViewBag.Title = "Log in";
+    this.Layout = MVCT.Shared.Views._LoginLayout;
+}
+
+<div class="loginBox">
+    @using (this.Html.BeginForm(new { this.ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="loginBox_left">
+            <table class="loginBox_left_table">
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBoxFor(m => m.UserName, new { @class="loginBox_textbox"})
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.PasswordFor(m => m.Password, new { @class="loginBox_textbox"})
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <button id="Submit1" type="submit" value="Log In" class="login-button" style="width: 100px; height: 40px;"><i class="icon-key"></i>&nbsp;Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" style="color: #111; text-decoration: none; font-size: 12px;">Forgot your password?</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 40px"></td>
+                </tr>
+
+            </table>
+        </div>
+    }
+
+    <div class="loginBox_middle">
+        &nbsp;
+    </div>
+    <div class="loginBox_right">
+        <table class="loginBox_right_table">
+            <tr>
+                <td style="height: 7px;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    @Html.Action("ExternalLoginsList", new { this.ViewBag.ReturnUrl })
+                     
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="height: 100px;">OR
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button  id="Button1" type="submit" class="esione-button" onclick="window.location = '@Url.Action(MVCT.Account.Register())'"><img src="../../Content/Images/ESIOne_SignUp.png" alt="" /></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear"></div>
+</div>
+<div style="height: 30px;"></div>
+<style>
+    .quotes {
+        display: none;
+        font-size: 30px;
+        color: white;
+        margin: 0 auto;
+        font-weight: bold;
+        width: 900px;
+        text-align: center;
+    }
+
+</style>
+   <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var quotes = $(".quotes");
+            var quoteIndex = -1;
+
+            function showNextQuote() {
+                ++quoteIndex;
+                quotes.eq(quoteIndex % quotes.length)
+                    .fadeIn(2000)
+                    .delay(2000)
+                    .fadeOut(2000, showNextQuote);
+            }
+
+            showNextQuote();
+
+        });
+    </script>
+
+<div style="height: 30px;"></div>
+
+<h2 class="quotes">Promoting Sport People Globally</h2>
+<h2 class="quotes">Sign up to create your online profile. Be seen by the world</h2>
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

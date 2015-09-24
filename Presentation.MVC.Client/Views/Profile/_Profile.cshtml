@@ -1,0 +1,144 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+<div id="ProfileTopSection">
+    <div class="profilePic" style="height: 180px; width: 180px;">
+        <div class="ProfileImgWrap ProfileImgBox" style="height: 180px; width: 180px; padding: 10px;">
+            <img src="@Url.Action(MVCT.Profile.Picture(Model.ProfileSummary.UserName))" alt="" style="width: 100%; height: 100%;"/>
+        </div>
+    </div>
+    <div id="AboutText" class="aboutText">
+        <div class="about">
+            <h1 style="font-weight: bold; font-size: 36px; color: #6bb130; text-transform: uppercase;">@Model.ProfileSummary.FullName</h1>
+
+            <div class="gap20"></div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="tblleft">Sports:</div>
+                    </td>
+                    <td>
+                        <div class="tblright">@Model.ProfileSummary.Sport</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tblleft">Current Position:</div>
+                    </td>
+                    <td>
+                        <div class="tblright">@Model.ProfileSummary.PlayingPosition</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tblleft">Current Club:</div>
+                    </td>
+                    <td>
+                        <div class="tblright">@Model.ProfileSummary.ClubTeam</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tblleft">Signed By:</div>
+                    </td>
+                    <td>
+                        <div class="tblright">@Model.ProfileSummary.SignedBy</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="middlelineBottom" style="margin-top: 20px; width: 100%;">&nbsp;</div>
+<div class="clear"></div>
+<div id="ProfileBottomSection">
+    <div class="personalLeft">
+        <table>
+            <tr>
+                <td>
+                    <div class="tblleft">Age:</div>
+                </td>
+                <td>
+                    <div class="tblright">@Model.ProfileSummary.Birthday.ToAge()</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tblleft">Height:</div>
+                </td>
+                <td>
+                    <div class="tblright">
+                        @if (!string.IsNullOrEmpty(Model.ProfileSummary.Height))
+                        {
+                            @Model.ProfileSummary.Height<span>&nbsp;cm</span>
+                        }
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tblleft">Weight:</div>
+                </td>
+                <td>
+                    <div class="tblright">
+                        @if (!string.IsNullOrEmpty(Model.ProfileSummary.Weight))
+                        {
+                            @Model.ProfileSummary.Weight<span>&nbsp;kg</span>
+                        }
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tblleft">Nationality:</div>
+                </td>
+                <td>
+                    <div class="tblright">@Model.ProfileSummary.Nationality</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="middlelineRight" style="float: left; height: 105px; width: 10px; margin-top: 5px;"></div>
+    <div class="personalRight">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="tblleft">Management Company:</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="tblright">@Model.ProfileSummary.ManagementCompany</div>    
+                </td>
+            </tr>
+             <tr>
+                <td style="height: 10px;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tblleft">Contract From:</div>
+                </td>
+                <td>
+                    <div class="tblright">@Html.DisplayFor(model => model.ProfileSummary.ContractDateFrom)</div>    
+                </td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <div class="tblleft">Contract To:</div>
+                </td>
+                <td>
+                     <div class="tblright">@Html.DisplayFor(model => model.ProfileSummary.ContractDateTo)</div>    
+                </td>
+            </tr>
+        </table>
+      
+    </div>
+    <div class="clear"></div>
+    <div class="ProfileAboutBox">
+        <span style="font-weight: bold; color: #999999;">About Me:</span>
+        <br />
+        <br />
+       @Html.Raw(HttpUtility.HtmlDecode(Model.About.About))
+    </div>
+</div>
+<div style="height: 20px;"></div>

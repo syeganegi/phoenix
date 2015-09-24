@@ -1,0 +1,156 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileSummaryModel
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".Contractdatepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+</script>
+
+@using (Ajax.BeginForm(MVCT.Edit.ProfileSummary(), new AjaxOptions
+       {
+           UpdateTargetId = "profile-view",
+           InsertionMode = InsertionMode.Replace,
+           OnSuccess = "profileEditClose",
+           OnFailure = "onAjaxFormFaliure",
+           HttpMethod = "Post"
+       },
+       new { id = "profile-form-submit" }))
+{
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.FirstName)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.LastName)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Birthday)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Birthday)
+                @Html.ValidationMessageFor(model => model.Birthday)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Sex)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Sex)
+                @Html.ValidationMessageFor(model => model.Sex)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Height)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Height)<span>&nbsp;cm</span>
+                @Html.ValidationMessageFor(model => model.Height)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Weight)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Weight)<span>&nbsp;kg</span>
+                @Html.ValidationMessageFor(model => model.Weight)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Nationality)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.Nationality)
+                @Html.ValidationMessageFor(model => model.Nationality)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.Sport)
+            </td>
+            <td class="editor-field">
+                @Html.DropDownList("Sport", "-- Select --")
+                @Html.ValidationMessageFor(model => model.Sport)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.ClubTeam)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.ClubTeam)
+                @Html.ValidationMessageFor(model => model.ClubTeam)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.ContractDateFrom)
+            </td>
+            <td class="editor-field">
+                @Html.TextBox("ContractDateFrom", string.Format("{0:d}", Model.ContractDateFrom), new { @class="Contractdatepicker" })
+                @Html.ValidationMessageFor(model => model.ContractDateFrom)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.ContractDateTo)
+            </td>
+            <td class="editor-field">
+                 @Html.TextBox("ContractDateTo", string.Format("{0:d}", Model.ContractDateTo), new { @class="Contractdatepicker" })
+                @Html.ValidationMessageFor(model => model.ContractDateTo)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.ManagementCompany)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.ManagementCompany)
+                @Html.ValidationMessageFor(model => model.ManagementCompany)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.SignedBy)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.SignedBy)
+                @Html.ValidationMessageFor(model => model.SignedBy)
+            </td>
+        </tr>
+        <tr>
+            <td class="editor-label">
+                @Html.LabelFor(model => model.PlayingPosition)
+            </td>
+            <td class="editor-field">
+                @Html.EditorFor(model => model.PlayingPosition)
+                @Html.ValidationMessageFor(model => model.PlayingPosition)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 10px;"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,39 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+<!-- Profile Header Image Box Starts -->
+<div class="profilePic" style="height: 80px; width: 80px;">
+    <div class="ProfileImgWrap ProfileImgBox" style="height: 80px; width: 80px; padding: 5px;">
+        <img src="@Url.Action(MVCT.Profile.Picture(@Model.ProfileSummary.UserName))" alt="" height="80px" width="80px;" />
+    </div>
+</div>
+<!-- Profile Header Image Box Ends -->
+
+<!-- Profile Header Right Box Starts -->
+<div class="profile-header-right-box">
+    <h2 style="color: #6bb130">@Model.ProfileSummary.FullName</h2>
+    <div class="gap10"></div>
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <div class="tblleft" style="padding: 0px; width: 100px;">Sports:</div>
+            </td>
+            <td>
+                <div class="tblright" style="padding: 0px; width: 120px;">@Model.ProfileSummary.Sport</div>
+            </td>
+            <td>
+                <div class="tblleft" style=" padding: 0px; width: 120px;">Current Position:</div>
+            </td>
+            <td>
+                <div class="tblright" style="padding: 0px;">@Model.ProfileSummary.PlayingPosition</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="tblleft" style="padding: 0px;">Current Club:</div>
+            </td>
+            <td>
+                <div class="tblright" style="padding: 0px;">@Model.ProfileSummary.ClubTeam</div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- Profile Header Right Box End -->

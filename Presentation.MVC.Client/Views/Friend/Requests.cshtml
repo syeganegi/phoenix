@@ -1,0 +1,38 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.FriendsModel
+@{
+    ViewBag.Title = "Friend Requests";
+    this.Layout = MVCT.Shared.Views._Layout;
+}
+<style>
+    .SearchProfileName {
+        color: #6bb130;
+        font-weight: bold;
+    }
+</style>
+
+<h2>@ViewBag.Title</h2>
+<div class="gap20"></div>
+@if (Model != null && Model.Friends != null && Model.Friends.Any())
+{
+    <ul style="list-style-type: none; width: 100%;">
+        @foreach (var profile in Model.Friends)
+        {
+             <li style="display: block; clear: both; height: 50px; border: solid 1px gainsboro; padding: 10px 10px; margin-bottom: 5px;">
+                <div style="float: left; width: 50px; margin-right: 5px;">
+                    <a href="@Url.Action(MVCT.Profile.Index(profile.UserName))"><img src="@Url.Action(MVCT.Profile.Picture(profile.UserName))" style="border: solid 1px #fff; width: 50px; height: 50px;" /></a></div>
+                <div style="float: left; width: 250px; margin-right: 5px;">@Html.ActionLink(profile.FullName, MVCT.Profile.Index(profile.UserName), new { @class = "SearchProfileName" })<br />
+                     <font style="font-size: 12px; font-weight: bold;">@Html.Encode(profile.Sport)</font>
+                </div>
+                <div style="float: right; ">
+                    @Html.ActionLink("Accept Request", MVCT.Friend.AcceptUser(profile.UserName), new { @class = "table-button"})<br/>
+                    <div class="gap5"></div>
+                    @Html.ActionLink("Not Now", MVCT.Friend.RejectUser(profile.UserName), new { @class = "table-button"})
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No result.</p>
+}

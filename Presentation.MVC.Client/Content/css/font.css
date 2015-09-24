@@ -1,0 +1,39 @@
+﻿/*
+   Icon Fonts Using ICOMOON Fonts
+*/
+
+/* ICOMOON Font Family for Icons */
+@font-face {
+	font-family: 'Conv_icomoonultimate';
+	src: url('../font/icomoonultimate.eot');
+	src:url('../font/icomoonultimate.eot?#iefix') format('embedded-opentype'),
+		url('../font/icomoonultimate.svg#iconFont') format('svg'),
+		url('../font/icomoonultimate.woff') format('woff'),
+		url('../font/icomoonultimate.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Open Sans Font Family */
+@font-face {
+    font-family: 'opensans';
+    src: url('../font/opensans-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/opensans-regular-webfont.svg#iconFont') format('svg'), /* Legacy iOS */
+    url('../font/opensans-regular-webfont.woff') format('woff'), /* Modern Browsers */
+    url('../font/opensans-regular-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* PT Sans Font Family */
+@font-face {
+    font-family: 'ptsans';
+    src: url('../font/pts55f-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../font/pts55f-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/pts55f-webfont.svg#iconFont') format('svg'), /* Legacy iOS */
+    url('../font/pts55f-webfont.woff') format('woff'), /* Modern Browsers */
+    url('../font/pts55f-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,10 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.Account.Birthday
+@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@{
+    var day = Model != null ? Model.Day : -1;
+    var month = Model != null ? Model.Month : -1;
+    var year = Model != null ? Model.Year : -1;
+}
+@Html.DayDropDownListFor(model => model.Day, day)
+@Html.MonthDropDownListFor(model => model.Month, month)
+@Html.YearDropDownListFor(model => model.Year, year)

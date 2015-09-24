@@ -1,0 +1,13 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\Phoenix.Application.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\Phoenix.Application.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\EntityFramework.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\PhoenixApp.Domain.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\bin\Debug\EntityFramework.xml
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\obj\Debug\Application.Seedwork.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\obj\Debug\Phoenix.PhoenixApp.Application.Seedwork.Resources.Messages.resources
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\obj\Debug\Application.Seedwork.csproj.GenerateResource.Cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\obj\Debug\Phoenix.Application.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.Seedwork\obj\Debug\Phoenix.Application.Seedwork.pdb

@@ -1,0 +1,35 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.LivingModel
+@{
+    ViewBag.Title = "Living";
+}
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CurrentCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CurrentCity)
+            @Html.ValidationMessageFor(model => model.CurrentCity)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Hometown)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Hometown)
+            @Html.ValidationMessageFor(model => model.Hometown)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to Profile", MVCT.Edit.Index())
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

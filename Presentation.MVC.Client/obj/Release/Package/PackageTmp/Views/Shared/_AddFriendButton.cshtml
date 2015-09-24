@@ -1,0 +1,108 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+@if (Model.ProfileSummary.UserName != this.CurrentProfile.UserName)
+{
+    <style>
+        .addFriendButton {
+            color: #ffffff;
+            background: #6bb130;
+            padding: 2px 78px 4px 78px;
+            border: 0;
+            font-size: 12px;
+            font-weight: bold;
+              cursor: pointer;
+        }
+
+        .addFriendButton:hover {
+            background: #222222;
+        }
+
+        .unfriendButton {
+            color: #ffffff;
+            background: #6bb130;
+            padding: 2px 84px 4px 84px;
+            border: 0;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .unfriendButton:hover {
+            background: #222222;
+        }
+
+        .notNowButton {
+            color: #ffffff;
+            background: #6bb130;
+            padding: 2px 84px 4px 84px;
+            border: 0;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .notNowButton:hover {
+             background: #222222;
+        }
+
+          .acceptRequestButton {
+            color: #ffffff;
+            background: #6bb130;
+            padding: 2px 65px 4px 65px;
+            border: 0;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .acceptRequestButton:hover {
+             background: #222222;
+        }
+
+             .cancelRequestButton {
+            color: #ffffff;
+            background: #6bb130;
+            padding: 2px 65px 4px 65px;
+            border: 0;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .cancelRequestButton:hover {
+             background: #222222;
+        }
+
+    </style>
+    <div style="width: 220px; border: 1px solid #eeeeee; padding: 5px 3px 9px 3px; margin-bottom: 5px;">
+        @{
+            var friendship = Model.Friendship;
+        }
+
+        @if (friendship.Status.Equals("Unknown"))
+        {
+            @Html.ActionLink("Add Friend", MVCT.Friend.Add(Model.ProfileSummary.UserName), new { @class = "addFriendButton" })
+        }
+        else if (friendship.Status.Equals("Requested"))
+        {
+            if (this.CurrentProfile.Id == friendship.InitiatorId)
+            {
+                <text>Friend Request Sent</text>
+                <br />
+                @Html.ActionLink("Cancel Request", MVCT.Friend.Cancel(friendship.Id), new { @class = "cancelRequestButton" })
+            }
+            else
+            {
+                @Html.ActionLink("Accept Request", MVCT.Friend.Accept(friendship.Id), new { @class = "acceptRequestButton" })
+                <div class="gap5"></div>
+                @Html.ActionLink("Not Now", MVCT.Friend.Reject(friendship.Id), new { @class = "notNowButton" })
+            }
+        }
+        else if (friendship.Status.Equals("Accepted"))
+        {
+            @Html.ActionLink("Unfriend", MVCT.Friend.Unfriend(friendship.Id), new { @class = "unfriendButton" })
+        }
+    </div>
+}
+
+
+

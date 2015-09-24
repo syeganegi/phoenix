@@ -1,0 +1,30 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.Entities.ProfileSearchResult
+
+@if (Model.FriendshipStatus.Equals("Unknown"))
+{
+    @Html.ActionLink("Add Friend", MVCT.Friend.Add(Model.ProfileUserName), new { @class = "table-button"})
+}
+else if (Model.FriendshipStatus.Equals("Requested"))
+{
+    if (this.CurrentProfile.Id == Model.FriendshipInitiatorId)
+    {
+        <text>Request Sent</text><br/>
+        @Html.ActionLink("Cancel Request", MVCT.Friend.Cancel(Model.FriendshipId), new { @class = "table-button"})
+    }
+    else
+    {
+        <div>
+        @Html.ActionLink("Accept Request", MVCT.Friend.Accept(Model.FriendshipId), new { @class = "table-button"})<br/>
+            <div class="gap5"></div>
+            <div style="float: right;" >
+                @Html.ActionLink("Not Now", MVCT.Friend.Reject(Model.FriendshipId), new { @class = "table-button"})
+            </div>
+            <div style="clear: both;"></div>
+            </div>
+        }
+
+}
+else if (Model.FriendshipStatus.Equals("Accepted"))
+{
+        @Html.ActionLink("Unfriend", MVCT.Friend.Unfriend(Model.FriendshipId), new { @class = "table-button"})
+}

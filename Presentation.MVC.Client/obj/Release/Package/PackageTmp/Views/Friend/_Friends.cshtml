@@ -1,0 +1,51 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.FriendsModel
+@Html.ValidationSummary(true)
+
+<style>
+    .friendbox {
+        float: left;
+         width: 45%;
+         height: 50px;
+          padding: 10px 10px;
+           margin-right: 10px;
+          border: 1px solid gainsboro;
+        -moz-box-shadow: 3px 3px 4px #ccc;
+        -webkit-box-shadow: 3px 3px 4px #ccc;
+        box-shadow: 3px 3px 4px #ccc;
+    }
+</style>
+
+<div class="tabs_Friends">
+    <div class="tabs-header">Friends</div>
+    @if (Model != null && Model.Friends != null && Model.Friends.Any())
+    {
+        var friends = Model.Friends;
+        var count = friends.Count();
+        count = count % 2 == 0 ? count : count + 1;
+    
+        <ul style="list-style-type: none;">
+            @for (var i = 0; i < count / 2; i++)
+            {
+                <li style="display: block; clear: both; height: 50px;">
+                    @{ var model = friends[i * 2]; }
+                    <div class="friendbox">
+                        @Html.Partial(MVCT.Friend.Views._Friend, model)
+                    </div>
+                    @if (i * 2 + 1 < friends.Count())
+                    {
+                        model = friends[i * 2 + 1];
+                        <div  class="friendbox">
+                            @Html.Partial(MVCT.Friend.Views._Friend, model)
+                        </div>
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+   
+        <p>No Friends </p>
+    }
+
+</div>

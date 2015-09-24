@@ -1,0 +1,21 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePictureModel
+<fieldset>
+    <h1>Profile Picture</h1>
+
+    <div class="display-field">
+        <img src="@Url.Action(MVCT.Profile.Picture(User.Identity.Name))" style="width: 240px;" />
+    </div>
+    <div style="clear: both;">
+        @using (Html.BeginForm(MVCT.Edit.Picture(), FormMethod.Post, new {enctype = "multipart/form-data"}))
+        {
+            @Html.ValidationSummary(true)
+            <label for="file">Upload New Picture:</label>
+            <input type="file" name="file" id="file" />
+            <input type="submit" />
+            <p><sup>Recommended size is 240 x 240 pixels</sup></p>
+        }
+    </div>
+</fieldset>
+<div>
+    @Html.ActionLink("Back to Profile", MVCT.Edit.Index())
+</div>

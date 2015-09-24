@@ -1,0 +1,134 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @*<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />*@
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css/main")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/custom")
+
+
+    <link href="~/Content/css/custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            /* ---------------------------------------------------------------------- */
+            /*	Tabs
+        /* ---------------------------------------------------------------------- */
+            $.ajaxSetup({ cache: false });
+
+            // Needed variables
+            var $content = $("#TabsContainer");
+
+            // Run easytabs
+            $content.easytabs({
+                animate: true,
+                updateHash: false,
+                transitionIn: 'slideDown',
+                transitionOut: 'slideUp',
+                animationSpeed: 600,
+                tabs: ".tmenu",
+                tabActiveClass: 'active',
+                cache: false
+            });
+
+            // Hover menu effect
+            $content.find('.tabs li a').hover(
+                function () {
+                    $(this).stop().animate({ marginTop: "-7px" }, 200);
+                }, function () {
+                    $(this).stop().animate({ marginTop: "0px" }, 300);
+                }
+            );
+
+
+        });
+    </script>
+
+
+</head>
+<body>
+    <!-- Header Starts -->
+    <div id="header">
+        <div class="GridWrap">
+            @Html.Partial("_Header")
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    <div class="clear"></div>
+
+    <!-- Middle Section Starts -->
+    <div id="middle-section">
+        <div class="GridWrap">
+            <div id="TabsContainer">
+                <!-- Tabs Menu Starts -->
+                @Html.Partial("_TabsMenu")
+                <!-- Tabs Menu Ends -->
+
+                <div class="clear"></div>
+
+                <div class="MenuContentSeperator"></div>
+
+                <div class="clear"></div>
+
+                <!-- Main Content Starts ----------------------------->
+
+                <!-- Left Content Starts -->
+                <div class="grid_738">
+
+                    <!-- Tabs -->
+                    <div id="bodyRender">@RenderBody()</div>
+                    <!-- /Tabs -->
+
+                </div>
+                <!-- Left Content Ends -->
+
+                <!-- Adds Starts -->
+                <div class="grid_246_custom">
+                    <div class="clear"></div>
+                    <div id="right-top-addfriend-button">
+                        @Html.Partial("_AddFriendButton")
+                    </div>
+                    <div id="right-top-suggestfriend-button">
+                        <div style="width: 220px; border: 1px solid #eeeeee; padding: 5px 3px 9px 3px; margin-bottom: 5px;">
+                            <a href="@Url.Action(MVCT.Profile.Suggest(User.Identity.Name))" class="SuggestedFriendButton">Suggested Friends</a>
+                        </div>
+                    </div>
+                    <div id="right-top-box">
+                        @Html.Partial("_RightTopBox")
+                    </div>
+                    <div id="Adds" class="sticky">
+                        @Html.Partial("_Adds")
+                    </div>
+                </div>
+                <!-- Adds Ends -->
+
+                <!-- Main Content Starts ----------------------------->
+            </div>
+        </div>
+    </div>
+    <!-- Middle Section Ends -->
+
+    <div class="clear"></div>
+
+    <!-- Scroll to Top Starts -->
+    <a href="#" class="scrollup"><i class="icon-arrow-up-3"></i></a>
+    <!-- Scroll to Top Ends -->
+
+    <!-- Footer Starts -->
+    <div id="footer">
+        <div class="GridWrap">
+            @Html.Partial("_Footer")
+        </div>
+    </div>
+    <!-- Footer Ends -->
+
+    @this.RenderSection("scripts", required: false)
+</body>
+</html>

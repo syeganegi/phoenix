@@ -1,0 +1,49 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.Account.LocalPasswordModel
+@{
+    this.ViewBag.Title = "Manage Account";
+
+}
+
+<style>
+    .fb-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 308px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+}
+</style>
+
+<hgroup class="title">
+    <h2>@this.ViewBag.Title.</h2>
+</hgroup>
+<div style="height: 10px;"></div>
+
+<p class="message-success">@this.ViewBag.StatusMessage</p>
+
+<label>You're logged in as <strong style="font-weight: bold; color: #6bb130">@this.User.Identity.Name</strong>.</label>
+
+<div style="height: 10px; border-bottom: 1px dashed #cccccc;"></div>
+@if (this.ViewBag.HasLocalPassword)
+{
+    @Html.Partial("_ChangePasswordPartial")
+}
+else
+{
+    @Html.Partial("_SetPasswordPartial")
+}
+<div style="height: 10px; border-bottom: 1px dashed #cccccc;"></div>
+<div style="height: 10px;"></div>
+<section id="externalLogins">
+    @Html.Action("RemoveExternalLogins")
+
+    <h3>Add an external login</h3>
+    <div style="height: 10px;"></div>
+    @Html.Action("ExternalLoginsList", new { this.ViewBag.ReturnUrl })
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

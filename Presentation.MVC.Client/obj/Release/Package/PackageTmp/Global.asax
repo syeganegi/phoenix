@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Phoenix.PhoenixApp.Presentation.MVC.Client.MvcApplication" Language="C#" %>

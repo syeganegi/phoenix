@@ -1,0 +1,47 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.Admin.ProfileAdminModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<div class="gap15"></div>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+ 
+
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.UserName)
+
+    <table>
+        <tr>
+            <td>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.IsEnabled)
+                </div>
+            </td>
+            <td>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.IsEnabled)
+                    @Html.ValidationMessageFor(model => model.IsEnabled)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 10px;"></td>
+        </tr>
+         <tr>
+            <td>
+                
+            </td>
+            <td>
+                  <input type="submit" value="Save" />
+            </td>
+        </tr>
+    </table>
+}
+
+<div class="gap15"></div>
+<div>
+        @Html.ActionLink("Back to List", MVCT.Admin.Home.Index())
+</div>

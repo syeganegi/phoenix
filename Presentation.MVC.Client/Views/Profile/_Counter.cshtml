@@ -1,0 +1,3 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileCounterModel
+@Html.ViewCounterFor(model => model.ViewCounter, User.Identity.Name)

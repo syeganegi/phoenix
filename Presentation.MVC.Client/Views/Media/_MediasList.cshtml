@@ -1,0 +1,19 @@
+﻿@model MediaModel[]
+@using Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule
+
+<div id="mediaList">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var mediaModel in Model)
+        {
+        @Html.Partial(MVCT.Media.Views._Media, mediaModel)
+        }
+    }
+    else
+    {
+        <div id="noMedia">
+            <p>No media found</p>
+        </div>
+    }
+</div>
+

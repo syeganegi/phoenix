@@ -1,0 +1,8 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\bin\Release\PhoenixApp.Domain.Seedwork.dll.config
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\bin\Release\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\bin\Release\PhoenixApp.Domain.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\bin\Release\EntityFramework.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\bin\Release\EntityFramework.xml
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\obj\Release\Domain.Seedwork.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\obj\Release\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Domain.Seedwork\obj\Release\PhoenixApp.Domain.Seedwork.pdb

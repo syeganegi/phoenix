@@ -1,0 +1,9 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+@{
+    this.Layout = MVCT.Shared.Views._ProfileLayout;
+    this.ViewBag.Title = Model.ProfileSummary.FullName;
+}
+@Html.Partial(MVCT.Profile.Views._Dashboard)
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,41 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileSearchResultModel
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<style>
+    .SearchProfileName {
+        color: #6bb130;
+        font-weight: bold;
+    }
+</style>
+
+<h2>Search</h2>
+<div style="height: 20px;"></div>
+@Html.ValidationSummary(true)
+
+@if (Model != null && Model.SearchResults != null && Model.SearchResults.Any())
+{
+    <ul style="list-style-type: none; width: 100%;">
+        @foreach (var searchResult in Model.SearchResults)
+        {
+            <li style="display: block; clear: both; height: 50px; border: solid 1px gainsboro; padding: 10px 10px; margin-bottom: 5px;">
+                <div style="float: left; width: 50px; margin-right: 5px;">
+                    <a href="@Url.Action(MVCT.Profile.Index(searchResult.ProfileUserName))">
+                        <img src="@Url.Action(MVCT.Profile.Picture(searchResult.ProfileUserName))" style="border: solid 1px #fff; width: 50px; height: 50px;" /></a>
+                </div>
+                <div style="float: left; width: 450px; margin-left: 10px; margin-bottom: 5px;">@Html.ActionLink(searchResult.ProfileFullName, MVCT.Profile.Index(searchResult.ProfileUserName), new { @class = "SearchProfileName" })<br />
+                    <font style="font-size: 12px; font-weight: bold;">@Html.Encode(searchResult.ProfileSport)</font>
+                </div>
+                <div style="float: right;">@Html.Partial(MVCT.Search.Views._Friendship, searchResult)</div>
+                <div class="clear"></div>
+
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No result.</p>
+}

@@ -1,0 +1,9 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\bin\Debug\PhoenixApp.Presentation.MVC.Common.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\bin\Debug\PhoenixApp.Presentation.MVC.Common.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\bin\Debug\ImageResizer.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\bin\Debug\ImageResizer.xml
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\obj\Debug\MVC.Common.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\obj\Debug\Phoenix.PhoenixApp.Presentation.MVC.Common.Resources.Messages.resources
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\obj\Debug\MVC.Common.csproj.GenerateResource.Cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\obj\Debug\PhoenixApp.Presentation.MVC.Common.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Presentation.MVC.Common\obj\Debug\PhoenixApp.Presentation.MVC.Common.pdb

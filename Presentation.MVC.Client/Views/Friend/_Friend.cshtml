@@ -1,0 +1,17 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileModel
+
+<style>
+    .SearchProfileName {
+        color: #6bb130;
+        font-weight: bold;
+    }
+</style>
+
+<div style="float: left; width: 50px; margin-right: 5px;">
+    <a href="@Url.Action(MVCT.Profile.Index(Model.UserName))">
+        <img src="@Url.Action(MVCT.Profile.Picture(Model.UserName))" style="border: solid 1px #fff; width: 50px; height: 50px;" /></a>
+</div>
+<div style="float: left; margin-left: 5px;">@Html.ActionLink(Model.FullName, MVCT.Profile.Index(Model.UserName), new { @class = "SearchProfileName" })<br />
+    @Html.Encode(Model.Sport)
+</div>
+<div style="float: right; padding-top: 33px">@Html.ActionLink("Unfriend", MVCT.Friend.UnfriendUser(Model.UserName),  new { @class = "table-button" })</div>

@@ -1,0 +1,28 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileModel[]
+@{
+    ViewBag.Title = "Find Friends";
+}
+
+<h2>Find Friends</h2>
+@Html.ValidationSummary(true)
+
+@if (Model != null && Model.Any())
+{
+    <ul style="list-style-type: none; width: 500px;">
+        @foreach (var model in Model)
+        {
+            <li style="display: block; clear: both; height: 50px; border-bottom: solid 1px gainsboro; padding: 10px 0;">
+                <div style="float: left; width: 50px; margin-right: 5px;">
+                    <a href="@Url.Action(MVCT.Profile.Index(model.UserName))"><img src="@Url.Action(MVCT.Profile.Picture(model.UserName))" style="border: solid 1px #fff; width: 50px;" /></a></div>
+                <div style="float: left; width: 250px; margin-right: 5px;">@Html.ActionLink(model.FullName, MVCT.Profile.Index(model.UserName))<br />
+                    @Html.Encode(model.Sport)
+                </div>
+                <div style="float: right; width: 150px;">@Html.ActionLink("Unfriend", MVCT.Friend.Unfriend(model.UserName))</div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No result.</p>
+}

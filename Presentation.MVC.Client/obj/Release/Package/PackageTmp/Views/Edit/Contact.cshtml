@@ -1,0 +1,84 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ContactModel
+@{
+    ViewBag.Title = "Contact Info";
+}
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobilePhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobilePhone)
+            @Html.ValidationMessageFor(model => model.MobilePhone)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomePhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePhone)
+            @Html.ValidationMessageFor(model => model.HomePhone)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WorkPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WorkPhone)
+            @Html.ValidationMessageFor(model => model.WorkPhone)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressAddressLine1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressAddressLine1)
+            @Html.ValidationMessageFor(model => model.AddressAddressLine1)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressAddressLine2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressAddressLine2)
+            @Html.ValidationMessageFor(model => model.AddressAddressLine2)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressCity)
+            @Html.ValidationMessageFor(model => model.AddressCity)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressZipCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressZipCode)
+            @Html.ValidationMessageFor(model => model.AddressZipCode)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Website)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Website)
+            @Html.ValidationMessageFor(model => model.Website)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to Profile", MVCT.Edit.Index())
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

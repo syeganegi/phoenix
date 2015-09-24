@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8d11c6fd-e9df-4b0c-b87b-8fbbc3741659" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Microsoft.CSharp" />
+      <ReferencedAssembly AssemblyName="mscorlib" />
+      <ReferencedAssembly AssemblyName="PhoenixApp.Infrastructure.Crosscutting" />
+      <ReferencedAssembly AssemblyName="System" />
+      <ReferencedAssembly AssemblyName="System.Configuration" />
+      <ReferencedAssembly AssemblyName="System.Core" />
+      <ReferencedAssembly AssemblyName="System.Data" />
+      <ReferencedAssembly AssemblyName="System.Data.DataSetExtensions" />
+      <ReferencedAssembly AssemblyName="System.Data.Entity" />
+      <ReferencedAssembly AssemblyName="System.Drawing" />
+      <ReferencedAssembly AssemblyName="System.Runtime.Caching" />
+      <ReferencedAssembly AssemblyName="System.Runtime.Serialization" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel" />
+      <ReferencedAssembly AssemblyName="System.Transactions" />
+      <ReferencedAssembly AssemblyName="System.Web" />
+      <ReferencedAssembly AssemblyName="System.Web.Mvc" />
+      <ReferencedAssembly AssemblyName="System.Xml" />
+      <ReferencedAssembly AssemblyName="System.Xml.Linq" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2626/ProfileModuleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProfileModuleService.xsd" MetadataType="Schema" ID="9ea72d45-0cc2-49c0-b038-03785f3ecba6" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProfileModuleService6.xsd" MetadataType="Schema" ID="eecd5e11-7d2b-455a-acb5-eb9aed013ff2" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProfileModuleService.disco" MetadataType="Disco" ID="d86987f2-aae5-4ea1-8408-36db8b43c94a" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?disco" />
+    <MetadataFile FileName="ProfileModuleService1.xsd" MetadataType="Schema" ID="2c2f8aef-4478-4921-b1df-731bc19d24db" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProfileModuleService2.xsd" MetadataType="Schema" ID="a6aee52c-19f1-4d16-91d9-b8d48a9d2e75" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProfileModuleService3.xsd" MetadataType="Schema" ID="cec71631-f5e3-4020-a2d9-512b6c9c90b0" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProfileModuleService.wsdl" MetadataType="Wsdl" ID="3922e12e-0447-4eb7-b33b-a88d0626ae60" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?wsdl" />
+    <MetadataFile FileName="ProfileModuleService4.xsd" MetadataType="Schema" ID="058a0011-fc1e-4354-9cd0-1e0c715c2f53" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProfileModuleService5.xsd" MetadataType="Schema" ID="0891c83c-cf24-4a5b-8974-e68725a5c8fe" SourceId="1" SourceUrl="http://localhost:2626/ProfileModuleService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

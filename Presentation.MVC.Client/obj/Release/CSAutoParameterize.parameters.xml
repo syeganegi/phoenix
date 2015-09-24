@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="PhoenixConnection-Web.config Connection String" description="PhoenixConnection Connection String used in web.config by the application to access the database." defaultValue="Server=localhost;Database=PhoenixDB;User Id=PhoenixUser;Password=InspironN5110;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Users\\Sasan\\Documents\\Visual\ Studio\ 2012\\Projects\\Phoenix\\Presentation\.MVC\.Client\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PhoenixConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Phoenix.PhoenixApp.Infrastructure.Data.MainBoundedContext.UnitOfWork.MainBCUnitOfWork-Web.config Connection String" description="Phoenix.PhoenixApp.Infrastructure.Data.MainBoundedContext.UnitOfWork.MainBCUnitOfWork Connection String used in web.config by the application to access the database." defaultValue="Phoenix.PhoenixApp.Infrastructure.Data.MainBoundedContext.UnitOfWork.MainBCUnitOfWork_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Users\\Sasan\\Documents\\Visual\ Studio\ 2012\\Projects\\Phoenix\\Presentation\.MVC\.Client\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Phoenix.PhoenixApp.Infrastructure.Data.MainBoundedContext.UnitOfWork.MainBCUnitOfWork']/@connectionString" />
+  </parameter>
+</parameters>

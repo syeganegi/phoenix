@@ -1,0 +1,81 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfilePageModel
+<!-- Tab Menu Starts -->
+<div class="menu">
+    <ul class="tabs">
+        <li class="tmenu">
+            <a href="#profile" id="tabProfile">
+                <span class="icon">
+                    <i class="icon-profile"></i>
+                </span>
+                <span class="label">Profile
+                </span>
+            </a>
+        </li>
+          <li class="tmenu">
+            <a href="#resume" id="tabResume">
+                <span class="icon">
+                    <i class="icon-graduation"></i>
+                </span>
+                <span class="label">Resume
+                </span>
+            </a>
+        </li>
+        <li class="tmenu">
+            <a href="#achieve" id="tabAchieve">
+                <span class="icon">
+                    <i class="icon-trophy"></i>
+                </span>
+                <span class="label">Achievements
+                </span>
+            </a>
+        </li>
+        <li class="tmenu">
+            <a href="#results" id="tabResults">
+                <span class="icon">
+                    <i class="icon-knight"></i>
+                </span>
+                <span class="label">Results
+                </span>
+            </a>
+        </li>
+      
+        <li class="tmenu">
+            <a href="@Url.Action(MVCT.Profile.Medias(Model.ProfileSummary.UserName))" id="tabMedia" data-target="#media">
+                <span class="icon">
+                    <i class="icon-picture"></i>
+                </span>
+                <span class="label">Media
+                </span>
+            </a>
+        </li>
+       
+        <li class="tmenu">
+            <a href="@Url.Action(MVCT.Profile.Friends(Model.ProfileSummary.UserName))" id="tabFriends" data-target="#friends">
+                <span class="icon">
+                    <i class="icon-users"></i>
+                </span>
+                <span class="label">Friends
+                </span>
+            </a>
+        </li>
+        <li class="tmenu">
+            <a href="@Url.Action(MVCT.Profile.Posts(Model.ProfileSummary.UserName))" id="tabTwitWall" data-target="#twitwall">
+                <span class="icon">
+                    <i class="icon-comments-2"></i>
+                </span>
+                <span class="label">Shout Wall
+                </span>
+            </a>
+        </li>
+         <li class="tmenu">
+            <a href="#contact" id="tabContact">
+                <span class="icon">
+                    <i class="icon-mail"></i>
+                </span>
+                <span class="label">Contact
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- Tab Menu Ends -->

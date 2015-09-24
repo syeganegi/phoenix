@@ -1,0 +1,61 @@
+﻿@using Phoenix.PhoenixApp.Presentation.MVC.Client.Extensions
+@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.BasicInfoModel
+<fieldset><legend></legend>
+    <h1>Basic Info</h1>
+    <div class="editlink"><i class="icon-pencil-3"></i>@Html.EditLink(Model.UserName, MVCT.Edit.BasicInfo())</div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.FullName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FullName)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Birthday)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Birthday)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Sex)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sex)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Languages)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Languages)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Height)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Height)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Weight)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Weight)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.PoliticalViews)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PoliticalViews)
+    </div>
+        <div class="field-line"></div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Religion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Religion)
+    </div>
+</fieldset>

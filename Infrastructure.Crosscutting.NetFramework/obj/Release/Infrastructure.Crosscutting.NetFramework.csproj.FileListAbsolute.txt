@@ -1,0 +1,9 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\bin\Release\PhoenixApp.Infrastructure.Crosscutting.NetFramework.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\bin\Release\PhoenixApp.Infrastructure.Crosscutting.NetFramework.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\bin\Release\AutoMapper.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\bin\Release\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\bin\Release\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\bin\Release\AutoMapper.xml
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\obj\Release\Infrastructure.Crosscutting.NetFramework.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\obj\Release\PhoenixApp.Infrastructure.Crosscutting.NetFramework.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Crosscutting.NetFramework\obj\Release\PhoenixApp.Infrastructure.Crosscutting.NetFramework.pdb

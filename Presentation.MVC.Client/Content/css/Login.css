@@ -1,0 +1,171 @@
+﻿
+/* Open Sans Font Family */
+@font-face {
+    font-family: 'opensans';
+    src: url('../font/opensans-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/opensans-regular-webfont.svg#iconFont') format('svg'), /* Legacy iOS */
+    url('../font/opensans-regular-webfont.woff') format('woff'), /* Modern Browsers */
+    url('../font/opensans-regular-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #444;
+    font-family: opensans, sans-serif;
+    font-size: 12px;
+}
+
+.clear {
+    clear: both;
+}
+
+.logo {
+    width: 348px;
+    margin: 0 auto;
+    /* text-align: center;
+    color: #6bb130;
+    font-weight: bolder;
+    font-size: 52px;*/
+}
+
+.loginBox {
+    width: 708px;
+    margin: 0 auto;
+    border: 0px solid #333;
+    height: 300px;
+}
+
+.loginBox_left {
+    float: left;
+    width: 350px;
+    /*background: #333333;*/
+    height: 300px;
+}
+
+.loginBox_middle {
+    float: left;
+    border-right: 2px dashed #ffffff;
+    height: 245px;
+}
+
+.loginBox_right {
+    float: right;
+    width: 350px;
+    /*background: #666666;*/
+    height: 300px;
+}
+
+.loginBox_left_table {
+    width: 350px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loginBox_right_table {
+    width: 350px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loginBox_textbox {
+    width: 310px;
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 7px;
+    border: 1px solid #CCC;
+    outline: none;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
+    -moz-transition: border .2s linear, box-shadow .2s linear;
+    -webkit-transition: border .2s linear, -webkit-box-shadow .2s linear;
+    margin-bottom: 5px;
+}
+
+    .loginBox_textbox:hover {
+        border: 1px solid #222222;
+        -moz-box-shadow: 0 0 3px #222222, 0 1px 2px rgba(0, 0, 0, .15) inset;
+        -webkit-box-shadow: 0 0 3px #222222, 0 1px 2px rgba(0, 0, 0, .15) inset;
+        box-shadow: 0 0 3px #222222, 0 1px 2px rgba(0, 0, 0, .15) inset;
+    }
+
+    .loginBox_textbox:focus {
+        border: 1px solid #222222;
+        -moz-box-shadow: 0 0 3px #222222, 0 1px 2px rgba(0, 0, 0, .15) inset;
+        -webkit-box-shadow: 0 0 3px #222222, 0 1px 2px rgba(0, 0, 0, .15) inset;
+        box-shadow: 0 0 3px #222222, 0 1px 2px rgba(0, 0, 0, .15) inset;
+    }
+
+
+
+body .button, input[type="submit"], input[type="button"] {
+    color: #222;
+    background: #fff;
+    border: 1px solid #999;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+body .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    color: #ffffff;
+    background: #222222;
+    cursor: pointer;
+}
+
+.login-button {
+    color: #222;
+    background: #fff;
+    border: 1px solid #999;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    color: #ffffff;
+    background: #222222;
+    cursor: pointer;
+}
+
+.fb-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 308px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.esione-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 308px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.registerBox {
+    width: 460px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.registerBox-header {
+    color: #6bb130;
+    font-size: 20px;
+    font-weight: bold;
+}
+

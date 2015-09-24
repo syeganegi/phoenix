@@ -1,0 +1,22 @@
+﻿
+
+
+
+<table>
+    <tr>
+        <td>
+            <img src="@Url.Action(MVCT.Profile.Picture(User.Identity.Name))" style="width: 180px; vertical-align:middle"  />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          
+        </td>
+        <td>
+            @using (Html.BeginForm(MVCT.Edit.Picture(), FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    <label for="file">Upload New Picture:</label>
+    <input type="file" name="file" id="file" />
+    <p><sup>Recommended size is 180 x 180 pixels</sup></p>
+    <br/>
+    <input type="submit" value="Save" />
+}
+        </td>
+    </tr>
+</table>

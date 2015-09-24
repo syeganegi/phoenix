@@ -1,0 +1,42 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.WorkEduModel
+@{
+    ViewBag.Title = "Work & Education";
+}
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Job)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Job)
+            @Html.ValidationMessageFor(model => model.Job)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CollegeUniversity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CollegeUniversity)
+            @Html.ValidationMessageFor(model => model.CollegeUniversity)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SecondarySchool)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SecondarySchool)
+            @Html.ValidationMessageFor(model => model.SecondarySchool)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to Profile", MVCT.Edit.Index())
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

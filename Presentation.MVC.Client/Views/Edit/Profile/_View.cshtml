@@ -1,0 +1,123 @@
+﻿@model Phoenix.PhoenixApp.Presentation.MVC.Models.ProfileModule.ProfileSummaryModel
+<table class="edit-view-table">
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.FirstName)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.LastName)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.LastName)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.Birthday)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.Birthday)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.Sex)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.Sex)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.Height)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.Height)
+            @if (!string.IsNullOrEmpty(Model.Height))
+            {
+                <span>&nbsp;cm</span>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.Weight)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.Weight)
+            @if (!string.IsNullOrEmpty(Model.Weight))
+            {
+                <span>&nbsp;kg</span>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.Nationality)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.Nationality)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.Sport)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.Sport)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.ClubTeam)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.ClubTeam)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.ContractDateFrom)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.ContractDateFrom)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.ContractDateTo)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.ContractDateTo)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.ManagementCompany)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.ManagementCompany)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.SignedBy)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.SignedBy)
+        </td>
+    </tr>
+    <tr>
+        <td class="display-label">
+            @Html.DisplayNameFor(model => model.PlayingPosition)
+        </td>
+        <td class="display-field">
+            @Html.DisplayFor(model => model.PlayingPosition)
+        </td>
+    </tr>
+</table>

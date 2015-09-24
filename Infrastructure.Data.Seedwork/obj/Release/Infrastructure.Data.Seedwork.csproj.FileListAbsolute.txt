@@ -1,0 +1,14 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Infrastructure.Data.Seedwork.dll.config
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Infrastructure.Data.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Infrastructure.Data.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\EntityFramework.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Domain.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\bin\Release\EntityFramework.xml
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\obj\Release\Infrastructure.Data.Seedwork.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\obj\Release\Phoenix.PhoenixApp.Infrastructure.Data.Seedwork.Resources.Messages.resources
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\obj\Release\Infrastructure.Data.Seedwork.csproj.GenerateResource.Cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\obj\Release\PhoenixApp.Infrastructure.Data.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Infrastructure.Data.Seedwork\obj\Release\PhoenixApp.Infrastructure.Data.Seedwork.pdb

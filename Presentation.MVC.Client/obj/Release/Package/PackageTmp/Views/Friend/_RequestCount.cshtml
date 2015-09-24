@@ -1,0 +1,8 @@
+﻿@if (ViewBag.Count != null && (int)ViewBag.Count > 0)
+{
+    @Html.ActionLink(string.Format("{0} friend requests", (int)ViewBag.Count), MVCT.Friend.Requests())
+}
+else
+{
+    <p>No pending friend request.</p>
+}

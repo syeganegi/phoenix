@@ -1,0 +1,13 @@
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Application.MainBoundedContext.DTO.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Application.MainBoundedContext.DTO.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\AutoMapper.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Domain.MainBoundedContext.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Domain.Seedwork.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Infrastructure.Crosscutting.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Domain.MainBoundedContext.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Domain.Seedwork.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\PhoenixApp.Infrastructure.Crosscutting.pdb
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\bin\Release\AutoMapper.xml
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\obj\Release\Application.MainBoundedContext.DTO.csprojResolveAssemblyReference.cache
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\obj\Release\PhoenixApp.Application.MainBoundedContext.DTO.dll
+D:\Users\Sasan\Documents\Visual Studio 2012\Projects\Phoenix\Application.MainBoundedContext.DTO\obj\Release\PhoenixApp.Application.MainBoundedContext.DTO.pdb
